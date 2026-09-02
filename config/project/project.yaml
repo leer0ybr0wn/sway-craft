@@ -1,0 +1,22 @@
+dateModified: 1788355420
+email:
+  fromEmail: lee.p.taylor@gmail.com
+  fromName: Sway
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    2814e29f-07a8-4d8b-8812-f71726b8e852: Sway # Sway
+    6029d9fc-46ed-45c8-bdcd-250fcf256d67: Sway # Sway
+system:
+  edition: solo
+  live: true
+  name: Sway
+  schemaVersion: 5.11.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

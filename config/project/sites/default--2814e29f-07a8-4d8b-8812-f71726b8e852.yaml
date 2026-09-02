@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: Sway
+primary: true
+siteGroup: 6029d9fc-46ed-45c8-bdcd-250fcf256d67 # Sway
+sortOrder: 1
