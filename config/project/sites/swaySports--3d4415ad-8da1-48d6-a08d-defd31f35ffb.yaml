@@ -1,0 +1,9 @@
+baseUrl: $SWAY_SPORTS_URL
+enabled: '1'
+handle: swaySports
+hasUrls: true
+language: en
+name: 'Sway Sports'
+primary: false
+siteGroup: 6029d9fc-46ed-45c8-bdcd-250fcf256d67 # Sway
+sortOrder: 2
