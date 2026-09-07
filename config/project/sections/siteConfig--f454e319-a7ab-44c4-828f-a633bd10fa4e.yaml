@@ -1,0 +1,42 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: e2c58071-a3ea-4b02-b05c-52d7d925c07b # Site Settings
+handle: siteConfig
+maxAuthors: 1
+minAuthors: 1
+name: 'Site Config'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  0ecc4649-2065-4d81-8c5b-2ae205b9a325: # Buce Noire
+    enabledByDefault: true
+    hasUrls: true
+    template: site-settings/_entry.twig
+    uriFormat: site-settings
+  2b861e07-4793-454e-b381-2766fd4e9352: # The Red Room
+    enabledByDefault: true
+    hasUrls: true
+    template: site-settings/_entry.twig
+    uriFormat: site-settings
+  3d4415ad-8da1-48d6-a08d-defd31f35ffb: # Sway Sports
+    enabledByDefault: true
+    hasUrls: true
+    template: site-settings/_entry.twig
+    uriFormat: site-settings
+  2814e29f-07a8-4d8b-8812-f71726b8e852: # Sway
+    enabledByDefault: true
+    hasUrls: true
+    template: site-settings/_entry.twig
+    uriFormat: site-settings
+  d8020632-cefd-4b40-ad8e-c8f3a1c19768: # Club Rehab
+    enabledByDefault: true
+    hasUrls: true
+    template: site-settings/_entry.twig
+    uriFormat: site-settings
+type: single

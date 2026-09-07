@@ -1,4 +1,4 @@
-dateModified: 1788357133
+dateModified: 1788367650
 email:
   fromEmail: lee.p.taylor@gmail.com
   fromName: Sway
@@ -8,9 +8,12 @@ meta:
     0ecc4649-2065-4d81-8c5b-2ae205b9a325: 'Buce Noire' # Buce Noire
     2b861e07-4793-454e-b381-2766fd4e9352: 'The Red Room' # The Red Room
     3d4415ad-8da1-48d6-a08d-defd31f35ffb: 'Sway Sports' # Sway Sports
+    519b6bd2-10ae-49a7-a612-4e3d6fe539f8: Tagline # Tagline
     2814e29f-07a8-4d8b-8812-f71726b8e852: Sway # Sway
     6029d9fc-46ed-45c8-bdcd-250fcf256d67: Sway # Sway
     d8020632-cefd-4b40-ad8e-c8f3a1c19768: 'Club Rehab' # Club Rehab
+    e2c58071-a3ea-4b02-b05c-52d7d925c07b: 'Site Settings' # Site Settings
+    f454e319-a7ab-44c4-828f-a633bd10fa4e: 'Site Config' # Site Config
 system:
   edition: solo
   live: true

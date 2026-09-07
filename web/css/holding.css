@@ -1,0 +1,64 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	font-size: 16px;
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+	font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #222;
+	color: #ddd;
+}
+video {
+	max-width: 100%;
+	height: auto;
+}
+h1, p {
+	text-align: center;
+}
+nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-block: 0.5rem;
+	}
+	a {
+		display: block;
+		padding: 1rem;
+	}
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a, a:link {
+	color: inherit;
+	text-decoration: none;
+}
+.container {
+	max-width: 1480px;
+	margin: 0 auto;
+	padding-inline: 2rem;
+}
+.video-container {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.main-nav {
+	display: flex;
+	gap: 2rem;
+	text-transform: uppercase;
+}
+.border-bottom {
+	border-bottom: 2px solid #fff1;
+}
