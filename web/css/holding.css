@@ -112,6 +112,19 @@ a, a:link {
 	display: block;
 	width: 100%;
 }
+.tagline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+	img {
+		width: 90px;
+	}
+	h1 {
+		margin-block: 1rem;
+	}
+}
 .border-bottom {
 	border-bottom: 2px solid #fff2;
 }
@@ -126,4 +139,19 @@ a, a:link {
 }
 .text-center {
 	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.main-nav {
+		display: none;
+	}
+	nav .container {
+		justify-content: center;
+	}
+	.video-container {
+		margin-top: 5.5rem;
+	}
+	.tagline {
+		gap: 1rem;
+	}
 }
