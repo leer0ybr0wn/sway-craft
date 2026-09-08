@@ -94,9 +94,51 @@ nav {
 }
 
 .event-block {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 0.5rem;
 	border: 1px solid #fff2;
 	border-radius: 0.75rem;
 	overflow: hidden;
+	font-family: 'BrownStdBold';
+	text-transform: uppercase;
+	> img {
+		width: 120px;
+	}
+}
+
+.event-inner {
+
+	/* change to grid */
+
+	display: flex;
+	align-items: stretch;
+	gap: 1rem;
+	position: relative;
+	color: #fff;
+	background: linear-gradient(to bottom, var(--color-sports-light), var(--color-sports));
+	border-radius: 0.75rem;
+	> div {
+		padding: 1rem;
+	}
+	&::after {
+		content: 'vs';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 24px;
+		line-height: 24px;
+		font-size: 14px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: var(--color-sports);
+		
+	}
+	.card {
+		background-color: var(--card-color, #fff);
+	}
 }
 
 .tagline {
