@@ -154,4 +154,11 @@ a, a:link {
 	.tagline {
 		gap: 1rem;
 	}
+	.brand-list {
+		flex-direction: column;
+		align-items: center;
+		li {
+			width: 100%;
+		}
+	}
 }
