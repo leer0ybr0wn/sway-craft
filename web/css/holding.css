@@ -49,7 +49,8 @@ a, a:link {
 	text-decoration: none;
 }
 .logo img {
-	width: 220px;
+	width: 200px;
+	display: block;
 }
 .brand-list {
 	display: flex;
@@ -107,6 +108,8 @@ a, a:link {
 	display: flex;
 	gap: 2rem;
 	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 0 6px #0008;
 }
 .events-img {
 	display: block;

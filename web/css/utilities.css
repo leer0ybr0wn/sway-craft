@@ -1,0 +1,33 @@
+.d-block {
+	display: block;
+}
+.d-flex {
+	display: flex;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-uc {
+	text-transform: uppercase;
+}
+.let-sp-2 {
+	letter-spacing: 0.2em;
+}
+
+.border-bottom {
+	border-bottom: 2px solid #fff2;
+}
+
+.m-0 {
+	margin: 0;
+}
+.my-0 {
+	margin-block: 0;
+}
+.p-0 {
+	padding: 0;
+}
+.py-4 {
+	padding-block: 2rem;
+}

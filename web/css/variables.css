@@ -1,0 +1,13 @@
+:root {
+	/* Brand Colors */
+	--color-sports: #111111;
+	--color-bucenoire: #490970;
+	--color-rehab: #3e3e3e;
+	--color-redroom: #7f004c;
+
+	/* Base / UI Colors */
+	--color-bg: #000;
+	--color-text: #ddd;
+	--color-text-muted: #888;
+	--color-border: #fff2;
+}
