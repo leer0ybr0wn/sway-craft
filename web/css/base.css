@@ -97,12 +97,11 @@ nav {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	text-align: center;
 	padding: 0.5rem;
 	border: 2px solid #fff2;
 	border-radius: 0.75rem;
 	overflow: hidden;
-	font-family: 'BrownStdBold';
-	text-transform: uppercase;
 	> img {
 		width: 100px;
 	}
@@ -114,6 +113,10 @@ nav {
 	color: #fff;
 	background: linear-gradient(to bottom, var(--color-sports-light), var(--color-sports));
 	border-radius: 0.75rem;
+	div {
+		display: grid;
+		place-items: center;
+	}
 	
 	.cards {
 		display: grid;
@@ -125,7 +128,7 @@ nav {
 			position: absolute;
 			inset: 0;
 			background: repeating-linear-gradient(
-				45deg, #0001 0, #0001 10px, transparent 10px,	transparent 20px
+				45deg, #0001 0, #0001 12px, transparent 12px,	transparent 24px
 			);
 		}
 		&::after {
@@ -136,16 +139,17 @@ nav {
 			transform: translate(-50%, -50%);
 			width: 24px;
 			line-height: 24px;
-			font-size: 14px;
+			font-size: 12px;
+			letter-spacing: normal;
 			aspect-ratio: 1;
 			border-radius: 50%;
 			background-color: var(--color-sports);
 		}
 		.card {
-			padding: 1rem 1.5rem;
+			padding: 0.75rem 1.5rem;
 			background-color: var(--card-color, #fff);
 			> img {
-				width: 3rem;
+				width: 3.5rem;
 				aspect-ratio: 1;
 				object-fit: contain;
 				position: relative;
