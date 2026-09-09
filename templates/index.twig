@@ -31,7 +31,7 @@
 
 			<section class="video-container">
 				<div style="width: 100%; height: 0; position: relative; padding-bottom: 42.25%">
-					<iframe title="Video Player" src="//theblackarts.videomarketingplatform.co/v.ihtml/player.html?token=455c26096e5fd830be330642db3deaaf&source=embed&photo%5fid=131313133" style="width:100%; height:100%; position: absolute; top: 0; left: 0;" frameborder="0" border="0" scrolling="no" allowfullscreen allow="fullscreen">
+					<iframe title="Video Player" src="//theblackarts.videomarketingplatform.co/v.ihtml/player.html?token=455c26096e5fd830be330642db3deaaf&source=embed&photo%5fid=131313133" style="width:100%; height:100%; position: absolute; top: 0; left: 0;" frameborder="0" border="0" scrolling="no" allowfullscreen allow="autoplay; fullscreen">
 						<p>Your web browser does not support iframes, so this video cannot play.</p>
 					</iframe>
 				</div>
@@ -39,23 +39,29 @@
 		</header>
 
 		<main>
-			<section class="text-center">
-				<div class="container py-4 border-bottom">
+			<section>
+				<div class="container py-4 border-bottom text-center">
 					<div class="event-block">
 						<img src="/assets/img/swaysports.svg" alt="Sway Sports">
 						<div class="event-inner">
-							<div>On at Sway Sports today</div>
-							<div class="card" style="--card-color: {{ color1 }};">T1</div>
-							<div class="card" style="--card-color: {{ color2 }};">T2</div>
-							<div>Live 8pm 7th Sept</div>
+							<div class="p-3">On at Sway Sports today</div>
+							<div class="cards">
+								<div class="card" style="--card-color: {{ color1 }};">
+									<img src="/assets/img/swaysports.svg" alt="Sway Sports">
+								</div>
+								<div class="card" style="--card-color: {{ color2 }};">
+									<img src="/assets/img/swaysports.svg" alt="Sway Sports">
+								</div>
+							</div>
+							<div class="p-3">Live 8pm 7th Sept</div>
 						</div>
 						<img src="/assets/img/swaysports.svg" alt="Sway Sports">
 					</div>
 				</div>
 			</section>
 
-			<section class="text-center">
-				<div class="container py-4 let-sp">
+			<section>
+				<div class="container py-4 let-sp text-center">
 					<div class="tagline brand-font">
 						<img src="/assets/img/coventgarden.svg" alt="Covent Garden">
 						<div>

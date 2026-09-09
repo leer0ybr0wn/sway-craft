@@ -9,6 +9,7 @@
 	/* Base / UI Colors */
 	--color-bg: #000;
 	--color-text: #ddd;
-	--color-text-muted: #888;
+	--color-text-muted: #999;
 	--color-border: #fff2;
+	--color-grey-mid: #888;
 }
