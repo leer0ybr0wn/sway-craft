@@ -4,8 +4,10 @@
 	--color-sports-mid: #ff6b20;
 	--color-sports-light: #ff7b30;
 	--color-bucenoire: #490970;
+	--color-gold: #FEC277;
 	--color-rehab: #3e3e3e;
-	--color-redroom: #7f004c;
+	--color-redroom: #ff004c;
+	--color-redroom-bg: #7f004c;
 
 	/* Base / UI Colors */
 	--color-bg: #000;
@@ -13,4 +15,9 @@
 	--color-text-muted: #999;
 	--color-border: #fff2;
 	--color-grey-mid: #888;
+
+	--color-btn-bg: #ddd;
+	--color-btn-text: #333;
+	--color-btn-bg-hover: #fff;
+	--color-btn-text-hover: #000;
 }
