@@ -54,7 +54,7 @@
 									<img src="/assets/img/badge-mancity.svg" alt="Manchester City">
 								</div>
 							</div>
-							<div class="p-3">Live 8pm 7th Sept</div>
+							<div class="p-3">Live 8:00pm 7th Sept</div>
 						</div>
 						<img src="/assets/img/swaysports.svg" alt="Sway Sports">
 					</div>
@@ -63,14 +63,20 @@
 			</section>
 
 			<section>
-				<div class="container py-4 let-sp text-center">
-					<div class="tagline brand-font">
-						<img src="/assets/img/coventgarden.svg" alt="Covent Garden">
-						<div>
+				<div class="container text-center">
+					<div class="tagline ">
+						<div class="underg-times">
+							<div>5 mins</div>
+							<img src="/assets/img/coventgarden.svg" alt="Covent Garden">
+						</div>
+						<div class="brand-font">
 							<h1>The Greatest Night Out In London</h1>
 							<p>61 &ndash; 65 Queen Street, Covent Garden, London WC2B 5BZ</p>
 						</div>
-						<img src="/assets/img/holborn.svg" alt="Holborn">
+						<div class="underg-times">
+							<img src="/assets/img/holborn.svg" alt="Holborn">
+							<div>2 mins</div>
+						</div>
 					</div>
 				
 					<ul class="brand-list brand-font">
@@ -100,6 +106,10 @@
 						</li>
 					</ul>
 
+					<div class="private-event brand-font">
+						<h2>Sway London Private Event Hire</h2>
+						<p>With almost 1000 capacity, Central London's most adaptable &amp; welcoming venue.</p>
+					</div>
 				</div>
 			</section>
 
@@ -129,9 +139,11 @@
 
 		</main>
 
-		<footer class="text-center">
-			<p>&copy; Copyright {{ "now"|date("Y") }} {{ currentSite.name }}.</p>
-			<p>61 &ndash; 65 Queen Street, Covent Garden, London WC2B 5BZ</p>
+		<footer class="brand-font text-center">
+			<div class="container">
+				<p>61 &ndash; 65 Queen Street, Covent Garden, London WC2B 5BZ</p>
+				<p>&copy; Copyright {{ "now"|date("Y") }} {{ currentSite.name }}.</p>
+			</div>
 		</footer>
 	</body>
 </html>
