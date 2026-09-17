@@ -23,18 +23,24 @@ body {
 	font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	font-size: 16px;
 	-webkit-text-size-adjust: 100%;
+	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6, nav, .brand-font, .btn {
 	font-family: 'BrownStdBold';
 	text-transform: uppercase;
-	letter-spacing: 0.15em;
+	letter-spacing: 0.1em;
 	color: #fff;
 }
 
 h2 {
 	font-size: 2rem;
 	margin-block: 1rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin-block: 0.75rem;
 }
 
 img, svg, video {
@@ -82,6 +88,12 @@ footer {
 	}
 }
 
+hr {
+	border: none;
+	border-top: 2px solid #fff2;
+	margin-block: 2rem;
+}
+
 .main-nav {
 	display: flex;
 	gap: 2rem;
@@ -99,6 +111,11 @@ footer {
 	max-width: 1480px;
 	margin: 0 auto;
 	padding-inline: 3rem;
+}
+
+.text-width {
+	max-width: 800px;
+	margin-inline: auto;
 }
 
 .logo {
@@ -120,7 +137,22 @@ footer {
 	}
 }
 
+.event-container {
+	display: flex;
+	gap: 2rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 .event-block {
+	flex: 0 0 100%;
+	scroll-snap-align: center;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -133,14 +165,29 @@ footer {
 		width: 96px;
 		margin-inline: 1rem;
 	}
+	&.sports .event-inner {
+		background: linear-gradient(15deg, var(--color-sports), var(--color-sports-light));
+	}
+	&.rehab .event-inner {
+		background: url('/assets/img/bg-rehab-banner.jpg') center center / cover no-repeat;
+	}
+	&.bucenoire {
+		.event-inner {
+			background: var(--color-bucenoire);
+		}
+		img {
+			width: 120px;
+		}
+	}
 }
 
 .event-inner {
 	display: grid;
     grid-template-columns: 3fr 2fr 3fr;
 	color: #fff;
-	background: linear-gradient(15deg, var(--color-sports), var(--color-sports-light));
 	border-radius: 0.75rem;
+	min-height: 80px;
+	min-width: 60%;
 	div {
 		display: grid;
 		place-items: center;
@@ -300,10 +347,6 @@ section.content {
 			gap: 2rem;
 			max-width: 220px;
 			text-align: center;
-			p {
-				font-family: 'BrownStdBold';
-				text-transform: uppercase;
-			}
 		}
 		.info-right {
 			display: flex;
@@ -409,6 +452,22 @@ section.content {
 	}
 	.tagline {
 		gap: 1rem;
+	}
+	section.content {
+		margin-block: 4rem;
+		&.sports, &.bucenoire, &.rehab, &.redroom {
+			background: none;
+		}
+		.container {
+			flex-direction: column;
+			.info-left {
+				max-width: unset;
+			}
+		}
+		.brand-logo {
+			width: 180px;
+			margin-inline: auto;
+		}
 	}
 }
 

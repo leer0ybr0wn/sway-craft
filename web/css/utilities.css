@@ -4,12 +4,18 @@
 .d-flex {
 	display: flex;
 }
+.d-none {
+	display: none;
+}
 
 .text-center {
 	text-align: center;
 }
 .text-uc {
 	text-transform: uppercase;
+}
+.let-sp-1 {
+	letter-spacing: 0.1em;
 }
 .let-sp-2 {
 	letter-spacing: 0.2em;
@@ -28,6 +34,18 @@
 .my-0 {
 	margin-block: 0;
 }
+.my-4 {
+	margin-block: 2rem;
+}
+.my-5 {
+	margin-block: 3rem;
+}
+.my-6 {
+	margin-block: 4rem;
+}
+.mt-4 {
+	margin-top: 2rem;
+}
 .mb-3 {
 	margin-bottom: 1rem;
 }
@@ -42,4 +60,7 @@
 }
 .py-4 {
 	padding-block: 2rem;
+}
+.pb-4 {
+	padding-bottom: 2rem;
 }
