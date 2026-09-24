@@ -20,6 +20,9 @@
 .let-sp-2 {
 	letter-spacing: 0.2em;
 }
+.text-bold {
+	font-weight: bold;
+}
 
 .border-top {
 	border-top: 2px solid #fff2;
