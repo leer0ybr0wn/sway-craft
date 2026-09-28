@@ -9,4 +9,18 @@
  * @link https://craftcms.com/docs/5.x/system/routing.html
  */
 
-return [];
+return [
+    // Route each brand site's homepage to its own template
+    'swaySports' => [
+        '' => ['template' => 'swaysports/index'],
+    ],
+    'clubRehab' => [
+        '' => ['template' => 'clubrehab/index'],
+    ],
+    'buceNoire' => [
+        '' => ['template' => 'bucenoire/index'],
+    ],
+    'theRedRoom' => [
+        '' => ['template' => 'redroom/index'],
+    ],
+];
