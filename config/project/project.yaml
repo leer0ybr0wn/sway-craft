@@ -1,11 +1,11 @@
-dateModified: 1788367650
+dateModified: 1790612176
 email:
   fromEmail: lee.p.taylor@gmail.com
   fromName: Sway
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    0ecc4649-2065-4d81-8c5b-2ae205b9a325: 'Buce Noire' # Buce Noire
+    0ecc4649-2065-4d81-8c5b-2ae205b9a325: 'Bucé Noire' # Bucé Noire
     2b861e07-4793-454e-b381-2766fd4e9352: 'The Red Room' # The Red Room
     3d4415ad-8da1-48d6-a08d-defd31f35ffb: 'Sway Sports' # Sway Sports
     519b6bd2-10ae-49a7-a612-4e3d6fe539f8: Tagline # Tagline

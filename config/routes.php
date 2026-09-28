@@ -20,7 +20,7 @@ return [
     'buceNoire' => [
         '' => ['template' => 'bucenoire/index'],
     ],
-    'theRedRoom' => [
+    'redRoom' => [
         '' => ['template' => 'redroom/index'],
     ],
 ];

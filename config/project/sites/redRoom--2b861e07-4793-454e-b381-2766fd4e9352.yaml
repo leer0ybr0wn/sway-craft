@@ -1,6 +1,6 @@
 baseUrl: $THE_RED_ROOM_URL
 enabled: '1'
-handle: theRedRoom
+handle: redRoom
 hasUrls: true
 language: en
 name: 'The Red Room'

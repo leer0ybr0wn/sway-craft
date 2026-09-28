@@ -14,7 +14,7 @@ previewTargets:
     urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
-  0ecc4649-2065-4d81-8c5b-2ae205b9a325: # Buce Noire
+  0ecc4649-2065-4d81-8c5b-2ae205b9a325: # Bucé Noire
     enabledByDefault: true
     hasUrls: true
     template: site-settings/_entry.twig
