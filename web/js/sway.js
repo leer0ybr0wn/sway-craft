@@ -1,3 +1,15 @@
+// Nav bar bg based on scroll position
+const nav = document.querySelector('nav')
+const getScrollThreshold = () => window.innerWidth / 4
+
+function updateNav() {
+  nav.classList.toggle('scrolled', window.scrollY > getScrollThreshold())
+}
+
+window.addEventListener('scroll', updateNav)
+updateNav()
+
+// Event carousel
 const container = document.querySelector('.event-container')
 const blocks = Array.from(container.querySelectorAll('.event-block'))
 

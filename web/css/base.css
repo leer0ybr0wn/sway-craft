@@ -82,11 +82,16 @@ nav {
 	width: 100%;
 	top: 0;
 	z-index: 999;
+	background-color: transparent;
+	transition: background-color 0.5s ease;
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-block: 0.5rem;
+	}
+	&.scrolled {
+		background-color: #000;
 	}
 }
 
@@ -260,6 +265,7 @@ hr {
 	align-items: center;
 	gap: 2.5rem;
 	flex-wrap: wrap;
+	margin-inline: 2rem;
 	img {
 		width: 90px;
 	}
@@ -277,7 +283,7 @@ hr {
 
 .brand-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 	gap: 2rem;
 	font-size: 14px;
 	color: var(--color-text-muted);
@@ -359,12 +365,16 @@ hr {
 }
 
 section.content {
-	display: flex;
 	margin-block: 3rem;
 	min-height: 360px;
 	max-width: 1600px;
 	margin-inline: auto;
-
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right center;
+	.content-image {
+		display: none;
+	}
 	.container {
 		display: flex;
 		flex: 1;
@@ -399,7 +409,7 @@ section.content {
 }
 
 .content.sports {
-	background: url('/assets/img/bg-sports.jpg') right center / contain no-repeat;
+	background-image: url('/assets/img/bg-sports.jpg');
 	h2 {
 		color: var(--color-sports);
 	}
@@ -416,7 +426,7 @@ section.content {
 }
 
 .content.bucenoire {
-	background: url('/assets/img/bg-bucenoire.jpg') right center / contain no-repeat;
+	background-image: url('/assets/img/bg-bucenoire.jpg');
 	.brand-logo {
 		background-color: var(--color-bucenoire);
 		padding: 2rem 1rem;
@@ -438,11 +448,11 @@ section.content {
 }
 
 .content.rehab {
-	background: url('/assets/img/bg-rehab.jpg') right center / contain no-repeat;
+	background-image: url('/assets/img/bg-rehab.jpg');
 }
 
 .content.redroom {
-	background: url('/assets/img/bg-redroom.jpg') right center / contain no-repeat;
+	background-image: url('/assets/img/bg-redroom.jpg');
 	.brand-logo {
 		background-color: var(--color-redroom-bg);
 		padding: 2.5rem;
@@ -469,12 +479,28 @@ section.content {
 	color: var(--color-sports);
 }
 
+#events {
+	scroll-margin-top: 5rem;
+}
+
 
 /* Mobile styles */
 
+@media (max-width: 480px) {
+	.underg-times {
+		flex-direction: column;
+	}
+	.underg-times:first-child {
+		flex-direction: column-reverse;
+	}
+}
+
 @media (max-width: 767px) {
+	h2 {
+		font-size: 1.5rem;
+	}
 	.container {
-		padding-inline: 2rem;
+		padding-inline: 1.5rem;
 	}
 	nav .container {
 		justify-content: center;
@@ -483,15 +509,20 @@ section.content {
 		display: none;
 	}
 	.video-container {
-		margin-top: 5.5rem;
+		margin-top: 2.5rem;
 	}
-	.tagline {
-		gap: 1rem;
+	
+	main section {
+		padding-block: 1.5rem;
 	}
 	section.content {
 		margin-block: 2rem;
 		&.sports, &.bucenoire, &.rehab, &.redroom {
-			background: none;
+			background-image: none;
+		}
+		.content-image {
+			display: block;
+			margin-bottom: 2rem;
 		}
 		.container {
 			flex-direction: column;
@@ -503,6 +534,15 @@ section.content {
 			width: 180px;
 			margin-inline: auto;
 		}
+	}
+	.brand-list {
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.main-nav {
+		gap: 1rem;
 	}
 }
 
@@ -517,5 +557,18 @@ section.content {
 		.card {
 			width: 100%;
 		}
+	}
+	section.content {
+		background-position: top;
+	}
+}
+
+@media (max-width: 1340px) {
+	.tagline {
+		gap: 2rem;
+	}
+	.tagline > :nth-child(2) {
+		order: -1;
+		flex: 0 0 100%;
 	}
 }

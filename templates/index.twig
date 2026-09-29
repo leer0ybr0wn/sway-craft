@@ -7,8 +7,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ currentSite.name }} | Home</title>
-		<link rel="stylesheet" href="/css/base.css?v=0.4">
-		<link rel="stylesheet" href="/css/utilities.css?v=0.4">
+		<link rel="stylesheet" href="/css/base.css?v=0.5">
+		<link rel="stylesheet" href="/css/utilities.css?v=0.5">
 		<script src="/js/sway.js?v=0.1" defer></script>
 	</head>
 
@@ -22,9 +22,8 @@
 				
 					<ul class="main-nav">
 						<li><a href="#">About</a></li>
-						<li><a href="#">Events</a></li>
+						<li><a href="#events">Events</a></li>
 						<li><a href="#">Media</a></li>
-						<li><a href="#">Booking</a></li>
 						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
@@ -43,16 +42,16 @@
 			<section>
 				<div class="tagline text-center">
 					<div class="underg-times">
-						<div>5 mins</div>
-						<img src="/assets/img/coventgarden.svg" alt="Covent Garden">
+						<div>2 mins</div>
+						<img src="/assets/img/holborn.svg" alt="Holborn">
 					</div>
 					<div class="brand-font">
 						<h1>The Greatest Night Out In London</h1>
 						<p>61 &ndash; 65 Great Queen Street, Covent Garden, London WC2B 5BZ</p>
 					</div>
 					<div class="underg-times">
-						<img src="/assets/img/holborn.svg" alt="Holborn">
-						<div>2 mins</div>
+						<img src="/assets/img/coventgarden.svg" alt="Covent Garden">
+						<div>5 mins</div>
 					</div>
 				</div>
 			</section>
@@ -117,32 +116,32 @@
 
 					<ul class="brand-list brand-font text-center">
 						<li>
-							<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}" class="brand-tile tile-sports">
+							<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}" class="brand-tile tile-sports" target="_blank">
 								<img src="/assets/img/swaysports.svg" alt="Sway Sports">
 							</a>
 							<p>Sports Bar &amp; Restaurant</p>
 						</li>
 						<li>
-							<a href="{{ craft.app.sites.getSiteByHandle('buceNoire').baseUrl }}" class="brand-tile tile-bucenoire">
+							<a href="{{ craft.app.sites.getSiteByHandle('buceNoire').baseUrl }}" class="brand-tile tile-bucenoire" target="_blank">
 								<img src="/assets/img/bucenoire.svg" alt="Buce Noire">
 							</a>
 							<p>Premium Night Club &amp; Events</p>
 						</li>
 						<li>
-							<a href="{{ craft.app.sites.getSiteByHandle('clubRehab').baseUrl }}" class="brand-tile tile-rehab">
+							<a href="{{ craft.app.sites.getSiteByHandle('clubRehab').baseUrl }}" class="brand-tile tile-rehab" target="_blank">
 								<img src="/assets/img/rehab.svg" alt="Rehab">
 							</a>
 							<p>Night Club &amp; Event Space</p>
 						</li>
 						<li>
-							<a href="{{ craft.app.sites.getSiteByHandle('redRoom').baseUrl }}" class="brand-tile tile-redroom">
+							<a href="{{ craft.app.sites.getSiteByHandle('redRoom').baseUrl }}" class="brand-tile tile-redroom" target="_blank">
 								<img src="/assets/img/theredroom.svg" alt="The Red Room">
 							</a>
 							<p>Private Space</p>
 						</li>
 					</ul>
 
-					<div class="private-event brand-font my-6">
+					<div id="events" class="private-event brand-font my-6">
 						<h2>Sway London Private Event Hire</h2>
 						<p>With almost 1000 capacity, Central London's most adaptable &amp; welcoming venue.</p>
 					</div>
@@ -156,11 +155,11 @@
 						<p>For enquires or more information, contact events@swaylondon.co.uk</p>
 					</div>
 
-					
 				</div>
 			</section>
 
 			<section class="content sports">
+				<img src="/assets/img/bg-sports.jpg" alt="Sway Sports Background" class="content-image">
 				<div class="container">
 					<div class="info-left">
 						<img src="/assets/img/swaysports.svg" alt="Sway Sports" class="brand-logo">
@@ -173,7 +172,7 @@
 						<div>
 							<h2>SWAY Sports. London's Largest and Most Premium Sports Bar</h2>
 							<p>SWAY SPORTS Bar brings together the very best in live sport across numerous screens, with great food, expertly crafted drinks and an electric atmosphere.</p>
-							<p>It is the perfect place for after-work drinks on big match days, date nights or celebrations and boasts a female-friendly atmosphere, elevated interiors, and sports viewing... Done differently.</p>
+							<p>It is the perfect place for after-work drinks on big match days, date nights or celebrations and boasts a female-friendly atmosphere, elevated interiors, and sports viewing... done differently.</p>
 						</div>
 						<a href="#" class="btn cta" target="_blank">Super Sunday meets Super Roast - Book Now</a>
 					</div>
@@ -181,6 +180,7 @@
 			</section>
 
 			<section class="content bucenoire">
+				<img src="/assets/img/bg-bucenoire.jpg" alt="Sway Bucenoire Background" class="content-image">
 				<div class="container">
 					<div class="info-left">
 						<img src="/assets/img/bucenoire.svg" alt="Buce Noire" class="brand-logo">
@@ -202,6 +202,7 @@
 			</section>
 
 			<section class="content rehab">
+				<img src="/assets/img/bg-rehab.jpg" alt="Sway Rehab Background" class="content-image">
 				<div class="container">
 					<div class="info-left">
 						<div>
@@ -216,7 +217,7 @@
 					<div class="info-right">
 						<div>
 							<h2>Night Club &amp; Event Space</h2>
-							<p>REHAB is a Night Club housed at SWAY which brings together EDM from the best UK &amp; International DJs. Coupled with a 3AM Licence, Rehab is fast becoming the Centre of London's INDUSTRIAL HOUSE vibe.</p>
+							<p>REHAB is a Night Club housed at SWAY which brings together EDM from the best UK &amp; International DJs. Coupled with a 3AM Licence, REHAB is fast becoming the Centre of London's INDUSTRIAL HOUSE vibe.</p>
 						</div>
 						<!-- <a href="#" class="btn cta" target="_blank">Enter Rehab</a> -->
 						<a href="#" class="btn cta" target="_blank">Membership Enquiries &amp; Table Reservations</a>
@@ -225,6 +226,7 @@
 			</section>
 
 			<section class="content redroom">
+				<img src="/assets/img/bg-redroom.jpg" alt="Sway Red Room Background" class="content-image">
 				<div class="container">
 					<div class="info-left">
 						<img src="/assets/img/theredroom.svg" alt="The Red Room" class="brand-logo">
