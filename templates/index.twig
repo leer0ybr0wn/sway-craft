@@ -8,7 +8,19 @@
 		<main>
 			{% include 'components/tagline' %}
 
-			{% include 'components/events' %}
+			<section>
+				<div class="container pb-4 border-bottom">
+					<div class="event-container">
+						{% include 'components/events/events-sports.twig' %}
+
+						{% include 'components/events/events-rehab.twig' %}
+
+						{% include 'components/events/events-default.twig' %}
+
+						{% include 'components/events/events-bucenoire.twig' %}
+					</div>
+				</div>
+			</section>
 
 			<section>
 				<div class="container">

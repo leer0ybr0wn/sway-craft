@@ -10,6 +10,10 @@
  */
 
 return [
+    'default' => [
+        'media' => ['template' => 'media/index'],
+    ],
+
     // Route each brand site's homepage to its own template
     'swaySports' => [
         '' => ['template' => 'swaysports/index'],

@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ currentSite.name }} | Home</title>
-	</head>
+
+	{% include 'components/head' %}
+
 	<body>
-		<h1>{{ currentSite.name }}</h1>
+		<header class="mb-4">
+			{% include 'components/nav' %}
+			<div class="container-xl">
+				<img src="assets/img/temp/hero-sports.jpg">
+			</div>
+		</header>
+		
+		<main>
+			<section>
+				<div class="container">
+					{% include 'components/events/events-sports.twig' %}
+
+					<h3 class="mt-4">{{ currentSite.name }} content here</h3>
+					
+				</div>
+			</section>
+		</main>
+
+		{% include 'components/footer' %}
 	</body>
 </html>
