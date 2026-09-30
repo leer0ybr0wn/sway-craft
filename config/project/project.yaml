@@ -1,4 +1,4 @@
-dateModified: 1790612176
+dateModified: 1790793772
 email:
   fromEmail: lee.p.taylor@gmail.com
   fromName: Sway
@@ -18,8 +18,9 @@ system:
   edition: solo
   live: true
   name: Sway
+  retryDuration: null
   schemaVersion: 5.11.0.2
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
   defaultGroup: null
