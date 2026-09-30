@@ -77,6 +77,14 @@ a, a:link:not(.btn) {
 	text-decoration: none;
 }
 
+a:link.text-link {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	&:hover {
+		color: var(--color-sports-light);
+	}
+}
+
 nav {
 	position: fixed;
 	width: 100%;
@@ -341,6 +349,10 @@ hr {
 	border: 1px solid var(--color-redroom-bg);
 }
 
+#private-events {
+	scroll-margin-top: 5rem;
+}
+
 .private-event {
 	background: url('/assets/img/brushed-metal.jpg') center center / cover no-repeat;
 	padding: 1.25rem;
@@ -479,9 +491,7 @@ section.content {
 	color: var(--color-sports);
 }
 
-#events {
-	scroll-margin-top: 5rem;
-}
+
 
 
 /* Mobile styles */
