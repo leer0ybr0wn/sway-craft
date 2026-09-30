@@ -569,10 +569,16 @@ section.content {
 	.video-container {
 		margin-top: 3.5rem;
 	}
+
+	.container .event-block .event-inner {
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
 	
 	main section {
 		padding-block: 1.5rem;
 	}
+
 	section.content {
 		margin-block: 2rem;
 		&.sports, &.bucenoire, &.rehab, &.redroom {
