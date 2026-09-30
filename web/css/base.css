@@ -72,6 +72,13 @@ ul {
 	padding: 0;
 }
 
+button {
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0.25rem;
+}
+
 a, a:link:not(.btn) {
 	color: inherit;
 	text-decoration: none;
@@ -89,7 +96,7 @@ nav {
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 999;
+	z-index: 90;
 	background-color: transparent;
 	transition: background-color 0.5s ease;
 	.container {
@@ -127,6 +134,10 @@ hr {
 	a:hover, a:active {
 		color: #fff;
 	}
+}
+
+#menu-btn {
+	display: none;
 }
 
 .container-xl {
@@ -492,8 +503,6 @@ section.content {
 }
 
 
-
-
 /* Mobile styles */
 
 @media (max-width: 480px) {
@@ -513,13 +522,39 @@ section.content {
 		padding-inline: 1.5rem;
 	}
 	nav .container {
-		justify-content: center;
+		padding: 0.75rem 1rem;
 	}
 	.main-nav {
-		display: none;
+		flex-direction: column;
+		gap: 0;
+		background-color: #111;
+		padding-top: 4rem;
+		padding-bottom: 1rem;
+		transition: transform 0.2s ease-in-out;
+		min-width: 180px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 98;
+		transform: translateX(101%);
+		&.active {
+			transform: translateX(0);
+		}
+		a {
+			padding-inline: 1.5rem;
+		}
+	}
+	#menu-btn {
+		display: block;
+		position: relative;
+		z-index: 99;
+		opacity: 0.75;
+		&:hover, &:active {
+			opacity: 1;
+		}
 	}
 	.video-container {
-		margin-top: 2.5rem;
+		margin-top: 3.5rem;
 	}
 	
 	main section {
@@ -536,6 +571,7 @@ section.content {
 		}
 		.container {
 			flex-direction: column;
+			gap: 2rem;
 			.info-left {
 				max-width: unset;
 			}
@@ -550,9 +586,12 @@ section.content {
 	}
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 	.main-nav {
 		gap: 1rem;
+	}
+	.container {
+		padding-inline: 2rem;
 	}
 }
 

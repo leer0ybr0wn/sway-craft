@@ -9,6 +9,14 @@ function updateNav() {
 window.addEventListener('scroll', updateNav)
 updateNav()
 
+// Mobile nav toggle
+const menuBtn = document.getElementById('menu-btn')
+const mainNav = document.querySelector('.main-nav')
+
+menuBtn.addEventListener('click', () => {
+  mainNav.classList.toggle('active')
+})
+
 // Event carousel
 const container = document.querySelector('.event-container')
 const blocks = Array.from(container.querySelectorAll('.event-block'))
