@@ -11,7 +11,7 @@
 
 return [
     'default' => [
-        'media' => ['template' => 'media/index'],
+        'media' => ['template' => 'media'],
     ],
 
     // Route each brand site's homepage to its own template
