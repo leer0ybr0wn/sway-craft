@@ -93,10 +93,11 @@ a, a:link:not(.btn) {
 }
 
 a:link.text-link {
-	text-decoration: underline;
+	color: var(--color-sports);
+	
 	text-underline-offset: 3px;
 	&:hover {
-		color: var(--color-sports-light);
+		text-decoration: underline;
 	}
 }
 
@@ -378,9 +379,9 @@ hr {
 }
 
 .private-event {
-	background: url('/assets/img/brushed-metal.jpg') center center / cover no-repeat;
+	/* background: url('/assets/img/brushed-metal.jpg') center center / cover no-repeat;
 	padding: 1.25rem;
-	border-radius: 0.75rem;
+	border-radius: 0.75rem; */
 	text-align: center;
 	h2 {
 		margin-top: 0;
@@ -430,6 +431,12 @@ section.content {
 				display: block;
 				margin-top: 1rem;
 			}
+			.brand-logo {
+				transition: opacity 0.2s ease;
+					&:hover {
+					opacity: 0.75;
+				}
+			}
 		}
 		.info-right {
 			display: flex;
@@ -441,6 +448,27 @@ section.content {
 				margin-top: 2rem;
 			}
 		}
+	}
+}
+
+.under-construction {
+	position: relative;
+	overflow: hidden;
+	&::after {
+		content: 'Under Construction';
+		text-transform: uppercase;
+		font-family: 'BrownStdBold';
+		font-size: 1.25rem;
+		text-align: center;
+		padding-inline: 5rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: rotate(45deg) translate(33%);
+		/* display: block; */
+		
+		color: #000;
+		background-color: #fff;
 	}
 }
 
@@ -587,6 +615,8 @@ section.content {
 		.content-image {
 			display: block;
 			margin-bottom: 2rem;
+			aspect-ratio: 1.8;
+			object-fit: cover;
 		}
 		.container {
 			flex-direction: column;
@@ -600,6 +630,14 @@ section.content {
 			margin-inline: auto;
 		}
 	}
+	.under-construction {
+		padding-top: 0;
+	}
+	.under-construction::after {
+		font-size: 1rem;
+		padding-inline: 3rem;
+	}
+
 	.brand-list {
 		gap: 1rem;
 	}

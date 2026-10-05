@@ -23,6 +23,9 @@
 .text-bold {
 	font-weight: bold;
 }
+.text-lg {
+	font-size: 1.5rem;
+}
 
 .border-top {
 	border-top: 2px solid #fff2;

@@ -6,10 +6,8 @@
 		{% include 'components/header' %}
 
 		<main>
-			{% include 'components/tagline' %}
-
 			<section>
-				<div class="container pb-4 border-bottom">
+				<div class="container pb-4">
 					<div class="event-container">
 						{% include 'components/events/events-sports.twig' %}
 
@@ -23,25 +21,27 @@
 			</section>
 
 			<section>
-				<div class="container">
-					<h2 class="text-center text-width">Something for every occasion, for every mood and for every kind of night out.</h2>
+				<div class="container-xl sway-ext">
+					<img src="/assets/img/sway-exterior.jpg" alt="Sway Exterior">
+				</div>
+			</section>
+			
+			{% include 'components/tagline' %}
 
-					{% include 'components/brand-tiles' %}
+			<section>
+				<div class="container">
+					<h2 class="text-center text-width text-orange">Something for every occasion, for every mood and for every kind of night out.</h2>
 
 					<div id="private-events" class="private-event brand-font my-6">
 						<h2>Sway London Private Event Hire</h2>
 						<p>With almost 1000 capacity, Central London's most adaptable &amp; welcoming venue.</p>
 					</div>
 
-					<div>
-						<h3 class="text-center text-width">Hold your Private Hire event at SWAY London &ndash; One venue, with endless possibilities.</h3>
-						<p>SWAY is custom made to bring the most ambitious events, or even the most private, to life.</p>
-						<p>Whether you're planning to your event during the day, the evening or late into the night your <span class="text-bold">Corporate Event, Product Launch, Private Party, Awards Ceremony, Birthday Party, Networking Event or Christmas Party</span> can see our space transformed into your vision, however ambitious your dream may be.</p>
-						<p>From Conferences, Late-night Parties, Intimate Gatherings, Large-scale Production or as a Film Location, we have the space, facilities and flexibility to make it happen. With premium food and drink, state-of-the-art AV, multiple spaces and a team that delivers, SWAY can do it all.</p>
-						<p class="text-bold">Your event. Your vision. Our space.</p>
+					<div class="text-center text-width">
+						<p>SWAY is custom made to bring the most ambitious events, or even the most private, to life, transforming your vision, however ambitious your dream may be. With premium food and drink, state-of-the-art AV, multiple spaces and a team that delivers, SWAY can do it all.</p>
+						<p class="text-lg text-bold">Your event. Your vision. Our space.</p>
 						<p>For enquires or more information, contact <a href="mailto:events@swaylondon.co.uk" class="text-link">events@swaylondon.co.uk</a></p>
 					</div>
-
 				</div>
 			</section>
 
@@ -49,12 +49,16 @@
 				<img src="/assets/img/bg-sports.jpg" alt="Sway Sports Background" class="content-image">
 				<div class="container">
 					<div class="info-left">
-						<img src="/assets/img/swaysports.svg" alt="Sway Sports" class="brand-logo">
+						<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}">
+							<img src="/assets/img/swaysports.svg" alt="Sway Sports" class="brand-logo">
+						</a>
+						
 						<div class="opentable">
 							<a href="https://www.opentable.co.uk/restaurant/profile/608109" target="_blank">
 								<img src="/assets/img/opentable-logo-white.svg" alt="OpenTable logo" class="opentable-logo">
 							</a>
 							<script type='text/javascript' src='//www.opentable.co.uk/widget/reservation/loader?rid=608109&type=standard&theme=standard&color=8&dark=false&iframe=true&domain=couk&lang=en-GB&newtab=false&ot_source=Restaurant%20website&font=brandonText&ot_logo=standard&primary_color=ffffff&primary_font_color=333333&button_color=ff4b00&button_font_color=ffffff&cfe=true'></script>
+							<a href="#" class="btn cta">Event Hire</a>
 						</div>
 					</div>
 					<div class="info-right">
@@ -68,39 +72,18 @@
 				</div>
 			</section>
 
-			<section class="content bucenoire">
-				<img src="/assets/img/bg-bucenoire.jpg" alt="Sway Bucenoire Background" class="content-image">
-				<div class="container">
-					<div class="info-left">
-						<img src="/assets/img/bucenoire.svg" alt="Buce Noire" class="brand-logo">
-						<div>
-							<a href="#" class="btn">Call Us on<br>0203 624 1953</a>
-							<a href="#" class="btn">Members</a>
-							<a href="#" class="btn">VIP Tables</a>
-						</div>
-					</div>
-					<div class="info-right">
-						<div>
-							<h2>Bucé Noire &ndash; Exclusive High-End Nightclub</h2>
-							<p>Bucé Noire is where luxury, music and nightlife collide. An elevated clubbing experience with statement interiors, premium drinks, extraordinary food, VIP tables and an atmosphere designed for those who search for much more than just a night out.</p>
-							<p>Intimate occasions followed by unforgettable nights on the dancefloor, with just that touch of mystery.</p>
-						</div>
-						<a href="#" class="btn cta" target="_blank">Membership Enquiries &amp; Table Reservations</a>
-					</div>
-				</div>
-			</section>
-
 			<section class="content rehab">
 				<img src="/assets/img/bg-rehab.jpg" alt="Sway Rehab Background" class="content-image">
 				<div class="container">
 					<div class="info-left">
 						<div>
 							<p class="text-uc mt-0">You are entering</p>
-							<img src="/assets/img/rehab.svg" alt="Rehab" class="brand-logo">
+							<a href="{{ craft.app.sites.getSiteByHandle('clubRehab').baseUrl }}">
+								<img src="/assets/img/rehab.svg" alt="Rehab" class="brand-logo">
+							</a>
 						</div>
 						<div>
-							<a href="#" class="btn">Members</a>
-							<a href="#" class="btn">VIP Tables</a>
+							<a href="#" class="btn">Event Hire</a>
 						</div>
 					</div>
 					<div class="info-right">
@@ -114,14 +97,37 @@
 				</div>
 			</section>
 
-			<section class="content redroom">
+			<section class="content bucenoire under-construction">
+				<img src="/assets/img/bg-bucenoire.jpg" alt="Sway Bucenoire Background" class="content-image">
+				<div class="container">
+					<div class="info-left">
+						<a href="{{ craft.app.sites.getSiteByHandle('buceNoire').baseUrl }}">
+							<img src="/assets/img/bucenoire.svg" alt="Buce Noire" class="brand-logo">
+						</a>
+						<div>
+							<a href="#" class="btn">Event Hire</a>
+						</div>
+					</div>
+					<div class="info-right">
+						<div>
+							<h2>Bucé Noire &ndash; Exclusive High-End Nightclub</h2>
+							<p>Bucé Noire is where luxury, music and nightlife collide. An elevated clubbing experience with statement interiors, premium drinks, extraordinary food, VIP tables and an atmosphere designed for those who search for much more than just a night out.</p>
+							<p>Intimate occasions followed by unforgettable nights on the dancefloor, with just that touch of mystery.</p>
+						</div>
+						<a href="#" class="btn cta" target="_blank">Membership Enquiries &amp; Table Reservations</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="content redroom under-construction">
 				<img src="/assets/img/bg-redroom.jpg" alt="Sway Red Room Background" class="content-image">
 				<div class="container">
 					<div class="info-left">
-						<img src="/assets/img/theredroom.svg" alt="The Red Room" class="brand-logo">
+						<a href="{{ craft.app.sites.getSiteByHandle('redRoom').baseUrl }}">
+							<img src="/assets/img/theredroom.svg" alt="The Red Room" class="brand-logo">
+						</a>
 						<div>
-							<a href="#" class="btn">Members</a>
-							<a href="#" class="btn">VIP Tables</a>
+							<a href="#" class="btn">Event Hire</a>
 						</div>
 					</div>
 					<div class="info-right">
@@ -132,6 +138,12 @@
 						</div>
 						<a href="#" class="btn cta" target="_blank">Membership Enquiries &amp; Table Reservations</a>
 					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="container">
+					{% include 'components/brand-tiles' %}
 				</div>
 			</section>
 		</main>
