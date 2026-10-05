@@ -559,7 +559,7 @@ section.content {
 	h2 {
 		font-size: 1.5rem;
 	}
-	.container {
+	.container, .container-xl {
 		padding-inline: 1.5rem;
 	}
 	nav .container {
@@ -640,6 +640,9 @@ section.content {
 
 	.brand-list {
 		gap: 1rem;
+	}
+	.sway-ext {
+		padding-inline: 0;
 	}
 }
 
