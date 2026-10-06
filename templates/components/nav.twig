@@ -1,12 +1,12 @@
 <nav>
 	<div class="container border-bottom">
-		<a href="/">
+		<a href="{{ craft.app.sites.getSiteByHandle('default').baseUrl }}">
 			<img class="logo" src="/assets/img/swaylondon-metal.jpg" alt="Sway London">
 		</a>
 				
 		<ul class="main-nav">
-			<li><a href="#">About</a></li>
-			<li><a href="{{ craft.app.sites.getSiteByHandle('default').baseUrl }}#private-events">Events</a></li>
+			<li><a href="{{ craft.app.sites.getSiteByHandle('default').baseUrl }}#about">About</a></li>
+			<li><a href="{{ craft.app.sites.getSiteByHandle('default').baseUrl }}events">Events</a></li>
 			<li><a href="{{ craft.app.sites.getSiteByHandle('default').baseUrl }}media">Media</a></li>
 			<li><a href="#">Contact</a></li>
 		</ul>

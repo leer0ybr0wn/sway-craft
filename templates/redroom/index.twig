@@ -7,7 +7,7 @@
 		<header class="mb-4">
 			{% include 'components/nav' %}
 			<div class="container-xl">
-				<img src="assets/img/temp/hero-redroom.jpg">
+				<img src="assets/img/hero-redroom.jpg">
 			</div>
 		</header>
 		
@@ -15,10 +15,12 @@
 			<section>
 				<div class="container">
 					{% include 'components/events/events-redroom.twig' %}
-
-					<h3 class="mt-4">{{ currentSite.name }} content here</h3>
 				</div>
 			</section>
+
+			{% include 'components/content/redroom.twig' %}
+
+			{% include 'components/brand-tiles' %}
 		</main>
 
 		{% include 'components/footer' %}

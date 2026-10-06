@@ -12,6 +12,7 @@
 return [
     'default' => [
         'media' => ['template' => 'media'],
+        'events' => ['template' => 'events'],
     ],
 
     // Route each brand site's homepage to its own template

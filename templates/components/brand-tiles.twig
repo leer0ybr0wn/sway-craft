@@ -1,29 +1,26 @@
-<ul class="brand-list brand-font text-center">
-	<li>
-		<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}" class="brand-tile tile-sports">
-			<img src="/assets/img/swaysports.svg" alt="Sway Sports">
-		</a>
-		<p>Sports Bar &amp; Restaurant</p>
-	</li>
-	
-	<li>
-		<a href="{{ craft.app.sites.getSiteByHandle('clubRehab').baseUrl }}" class="brand-tile tile-rehab">
-			<img src="/assets/img/rehab.svg" alt="Rehab">
-		</a>
-		<p>Night Club &amp; Event Space</p>
-	</li>
+{% set brands = [
+    { handle: 'default', label: 'Sway', description: 'Sway London', logo: 'swaylondon-metal-stacked.png', class: 'tile-sway' },
+    { handle: 'swaySports', label: 'Sway Sports', description: 'Sports Bar & Restaurant', logo: 'swaysports.svg', class: 'tile-sports' },
+    { handle: 'clubRehab', label: 'Rehab', description: 'Night Club & Event Space', logo: 'rehab.svg', class: 'tile-rehab' },
+    { handle: 'buceNoire', label: 'Buce Noire', description: 'Premium Night Club & Events', logo: 'bucenoire.svg', class: 'tile-bucenoire' },
+    { handle: 'redRoom', label: 'The Red Room', description: 'Private Space', logo: 'theredroom.svg', class: 'tile-redroom' },
+] %}
 
-	<li>
-		<a href="{{ craft.app.sites.getSiteByHandle('buceNoire').baseUrl }}" class="brand-tile tile-bucenoire">
-			<img src="/assets/img/bucenoire.svg" alt="Buce Noire">
-		</a>
-		<p>Premium Night Club &amp; Events</p>
-	</li>
-	
-	<li>
-		<a href="{{ craft.app.sites.getSiteByHandle('redRoom').baseUrl }}" class="brand-tile tile-redroom">
-			<img src="/assets/img/theredroom.svg" alt="The Red Room">
-		</a>
-		<p>Private Space</p>
-	</li>
-</ul>
+<section>
+	<div class="container">
+		<ul class="brand-list brand-font text-center">
+			{% for brand in brands %}
+				{% set site = craft.app.sites.getSiteByHandle(brand.handle) %}
+
+				{% if site and site.id != currentSite.id %}
+					<li>
+						<a href="{{ site.baseUrl }}" class="brand-tile {{ brand.class }}">
+							<img src="/assets/img/{{ brand.logo }}" alt="{{ brand.label }}">
+						</a>
+						<p>{{ brand.description }}</p>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+</section>

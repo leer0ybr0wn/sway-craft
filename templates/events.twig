@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	{% include 'components/head' %}
 
 	<body>
 		<header class="mb-4">
 			{% include 'components/nav' %}
 			<div class="container-xl">
-				<img src="assets/img/hero-sports.jpg">
+				<img src="assets/img/sway-exterior.jpg">
 			</div>
 		</header>
 		
 		<main>
-			<section>
-				<div class="container">
-					<div class="event-container">
-						{% include 'components/events/events-sports.twig' %}
-					</div>
-				</div>
-			</section>
-
-			{% include 'components/content/sports.twig' %}
+			{% include 'components/content/private-events.twig' %}
 
 			{% include 'components/brand-tiles' %}
 		</main>

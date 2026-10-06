@@ -20,7 +20,7 @@
 				</div>
 			</section>
 
-			<section>
+			<section id="about">
 				<div class="container-xl sway-ext">
 					<img src="/assets/img/sway-exterior.jpg" alt="Sway Exterior">
 				</div>
@@ -28,124 +28,18 @@
 			
 			{% include 'components/tagline' %}
 
-			<section>
-				<div class="container">
-					<h2 class="text-center text-width text-orange">Something for every occasion, for every mood and for every kind of night out.</h2>
+			{% include 'components/content/private-events.twig' %}
 
-					<div id="private-events" class="private-event brand-font my-6">
-						<h2>Sway London Private Event Hire</h2>
-						<p>With almost 1000 capacity, Central London's most adaptable &amp; welcoming venue.</p>
-					</div>
+			{% include 'components/content/sports.twig' %}
 
-					<div class="text-center text-width">
-						<p>SWAY is custom made to bring the most ambitious events, or even the most private, to life, transforming your vision, however ambitious your dream may be. With premium food and drink, state-of-the-art AV, multiple spaces and a team that delivers, SWAY can do it all.</p>
-						<p class="text-lg text-bold">Your event. Your vision. Our space.</p>
-						<p>For enquires or more information, contact <a href="mailto:events@swaylondon.co.uk" class="text-link">events@swaylondon.co.uk</a></p>
-					</div>
-				</div>
-			</section>
+			{% include 'components/content/rehab.twig' %}
 
-			<section class="content sports">
-				<img src="/assets/img/bg-sports.jpg" alt="Sway Sports Background" class="content-image">
-				<div class="container">
-					<div class="info-left">
-						<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}">
-							<img src="/assets/img/swaysports.svg" alt="Sway Sports" class="brand-logo">
-						</a>
-						
-						<div class="opentable">
-							<a href="https://www.opentable.co.uk/restaurant/profile/608109" target="_blank">
-								<img src="/assets/img/opentable-logo-white.svg" alt="OpenTable logo" class="opentable-logo">
-							</a>
-							<script type='text/javascript' src='//www.opentable.co.uk/widget/reservation/loader?rid=608109&type=standard&theme=standard&color=8&dark=false&iframe=true&domain=couk&lang=en-GB&newtab=false&ot_source=Restaurant%20website&font=brandonText&ot_logo=standard&primary_color=ffffff&primary_font_color=333333&button_color=ff4b00&button_font_color=ffffff&cfe=true'></script>
-							<a href="#" class="btn cta">Event Hire</a>
-						</div>
-					</div>
-					<div class="info-right">
-						<div>
-							<h2>SWAY Sports. London's Largest and Most Premium Sports Bar</h2>
-							<p>SWAY SPORTS Bar brings together the very best in live sport across numerous screens, with great food, expertly crafted drinks and an electric atmosphere.</p>
-							<p>It is the perfect place for after-work drinks on big match days, date nights or celebrations and boasts a female-friendly atmosphere, elevated interiors, and sports viewing... done differently.</p>
-						</div>
-						<a href="#" class="btn cta" target="_blank">Super Sunday meets Super Roast - Book Now</a>
-					</div>
-				</div>
-			</section>
+			{% include 'components/content/bucenoire.twig' %}
 
-			<section class="content rehab">
-				<img src="/assets/img/bg-rehab.jpg" alt="Sway Rehab Background" class="content-image">
-				<div class="container">
-					<div class="info-left">
-						<div>
-							<p class="text-uc mt-0">You are entering</p>
-							<a href="{{ craft.app.sites.getSiteByHandle('clubRehab').baseUrl }}">
-								<img src="/assets/img/rehab.svg" alt="Rehab" class="brand-logo">
-							</a>
-						</div>
-						<div>
-							<a href="#" class="btn">Event Hire</a>
-						</div>
-					</div>
-					<div class="info-right">
-						<div>
-							<h2>Night Club &amp; Event Space</h2>
-							<p>REHAB is a Night Club housed at SWAY which brings together EDM from the best UK &amp; International DJs. Coupled with a 3AM Licence, REHAB is fast becoming the Centre of London's INDUSTRIAL HOUSE vibe.</p>
-						</div>
-						<!-- <a href="#" class="btn cta" target="_blank">Enter Rehab</a> -->
-						<a href="#" class="btn cta" target="_blank">Membership Enquiries &amp; Table Reservations</a>
-					</div>
-				</div>
-			</section>
+			{% include 'components/content/redroom.twig' %}
 
-			<section class="content bucenoire under-construction">
-				<img src="/assets/img/bg-bucenoire.jpg" alt="Sway Bucenoire Background" class="content-image">
-				<div class="container">
-					<div class="info-left">
-						<a href="{{ craft.app.sites.getSiteByHandle('buceNoire').baseUrl }}">
-							<img src="/assets/img/bucenoire.svg" alt="Buce Noire" class="brand-logo">
-						</a>
-						<div>
-							<a href="#" class="btn">Event Hire</a>
-						</div>
-					</div>
-					<div class="info-right">
-						<div>
-							<h2>Bucé Noire &ndash; Exclusive High-End Nightclub</h2>
-							<p>Bucé Noire is where luxury, music and nightlife collide. An elevated clubbing experience with statement interiors, premium drinks, extraordinary food, VIP tables and an atmosphere designed for those who search for much more than just a night out.</p>
-							<p>Intimate occasions followed by unforgettable nights on the dancefloor, with just that touch of mystery.</p>
-						</div>
-						<a href="#" class="btn cta" target="_blank">Membership Enquiries &amp; Table Reservations</a>
-					</div>
-				</div>
-			</section>
-
-			<section class="content redroom under-construction">
-				<img src="/assets/img/bg-redroom.jpg" alt="Sway Red Room Background" class="content-image">
-				<div class="container">
-					<div class="info-left">
-						<a href="{{ craft.app.sites.getSiteByHandle('redRoom').baseUrl }}">
-							<img src="/assets/img/theredroom.svg" alt="The Red Room" class="brand-logo">
-						</a>
-						<div>
-							<a href="#" class="btn">Event Hire</a>
-						</div>
-					</div>
-					<div class="info-right">
-						<div>
-							<h2>Private Members Club</h2>
-							<p>The stunning look of The Red Room at SWAY reveals an intimate, high-energy experience with its own distinctive character.</p>
-							<p>Membership brings a level of privacy unmatched anywhere in London's West End with Private Access that guarantees anonymity for the most famous of guests.</p>
-						</div>
-						<a href="#" class="btn cta" target="_blank">Membership Enquiries &amp; Table Reservations</a>
-					</div>
-				</div>
-			</section>
-
-			<section>
-				<div class="container">
-					{% include 'components/brand-tiles' %}
-				</div>
-			</section>
+			{% include 'components/brand-tiles' %}
+			
 		</main>
 
 		{% include 'components/footer' %}

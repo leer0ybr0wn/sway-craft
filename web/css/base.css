@@ -167,7 +167,7 @@ hr {
 }
 
 .logo {
-	width: 200px;
+	width: 220px;
 }
 
 .btn {
@@ -351,6 +351,11 @@ hr {
 	}
 }
 
+.tile-sway {
+	background-color: #111;
+	border: 1px solid #fff2;
+}
+
 .tile-sports {
 	background-color: #111;
 	border: 1px solid #fff2;
@@ -374,7 +379,7 @@ hr {
 	border: 1px solid var(--color-redroom-bg);
 }
 
-#private-events {
+#about, #private-events {
 	scroll-margin-top: 5rem;
 }
 
