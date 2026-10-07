@@ -209,6 +209,7 @@ hr {
 	border: 2px solid #fff2;
 	border-radius: 0.75rem;
 	overflow: hidden;
+	transition: all 0.2s ease;
 	> img {
 		width: 96px;
 		margin-inline: 1rem;
@@ -232,6 +233,9 @@ hr {
 		.event-inner {
 			background: var(--color-redroom-bg);
 		}
+	}
+	&:hover {
+		border-color: #fff4;
 	}
 }
 
