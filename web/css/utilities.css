@@ -8,6 +8,10 @@
 	display: none;
 }
 
+.pos-relative {
+	position: relative;
+}
+
 .text-center {
 	text-align: center;
 }

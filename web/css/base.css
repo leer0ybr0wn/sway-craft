@@ -548,6 +548,18 @@ section.content {
 	color: var(--color-sports);
 }
 
+.media-video-container {
+	position: relative;
+	max-width: 1480px;
+	margin-inline: auto;
+}
+
+.mic-logo {
+	position: absolute;
+	bottom: 4rem;
+	left: 4rem;
+}
+
 
 /* Mobile styles */
 
@@ -674,6 +686,11 @@ section.content {
 	}
 	section.content {
 		background-position: top;
+	}
+	.mic-logo {
+		width: 25vw;
+		bottom: 2rem;
+		left: 2rem;
 	}
 }
 
