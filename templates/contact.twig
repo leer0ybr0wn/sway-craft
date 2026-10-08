@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'components/head' with {pageTitle: 'Contact'} %}
+
+	<body>
+		<header class="mb-4">
+			{% include 'components/nav' %}
+			<div class="container-xl">
+				<img src="assets/img/sway-exterior.jpg">
+			</div>
+		</header>
+		
+		<main>
+			<section>
+				<div class="container border-bottom pb-4">
+					<h1 class="border-bottom">Contact Us</h1>
+
+					<div class="row">
+						<div class="col-7">
+
+							{% set submission = submission ?? null %}
+
+							{# Display success notice if sent #}
+							{% if craft.app.session.hasFlash('notice') %}
+								<div class="alert alert-success">
+									<p>{{ craft.app.session.getFlash('notice') }}</p>
+								</div>
+							{% else %}
+
+								<form method="post" action="" accept-charset="UTF-8" class="contact-form">
+									{{ csrfInput() }}
+									{{ actionInput('contact-form/send') }}
+									{{ redirectInput('thanks') }}
+
+									<p>
+										<label for="from-name">Name</label><br>
+										<input id="from-name" type="text" name="fromName" value="{{ submission.fromName ?? '' }}" required>
+										{% if submission and submission.getErrors('fromName') %}
+											<span class="error">{{ submission.getErrors('fromName')|first }}</span>
+										{% endif %}
+									</p>
+
+									<p>
+										<label for="from-email">Email</label><br>
+										<input id="from-email" type="email" name="fromEmail" value="{{ submission.fromEmail ?? '' }}" required>
+										{% if submission and submission.getErrors('fromEmail') %}
+											<span class="error">{{ submission.getErrors('fromEmail')|first }}</span>
+										{% endif %}
+									</p>
+
+									<p>
+										<label for="subject">Subject</label><br>
+										<input id="subject" type="text" name="subject" value="{{ submission.subject ?? '' }}">
+										{% if submission and submission.getErrors('subject') %}
+											<span class="error">{{ submission.getErrors('subject')|first }}</span>
+										{% endif %}
+									</p>
+
+									<p>
+										<label for="message">Message</label><br>
+										<textarea id="message" name="message" rows="5" required>{{ submission.message ?? '' }}</textarea>
+										{% if submission and submission.getErrors('message') %}
+											<span class="error">{{ submission.getErrors('message')|first }}</span>
+										{% endif %}
+									</p>
+
+									<button type="submit" class="btn cta">Send Message</button>
+								</form>
+
+							{% endif %}
+
+						</div>
+
+						<div class="col-5">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2155.6368385153364!2d-0.12198078652099636!3d51.515837990048254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b34d89aa577%3A0x49918db4e2da4cd6!2sSway%20Bar!5e1!3m2!1sen!2suk!4v1791484633298!5m2!1sen!2suk" width="437" height="437" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="google-map"></iframe>
+							<p>Address:<br>61 &ndash; 65 Great Queen Street<br>Covent Garden<br>London<br>WC2B 5BZ</p>
+
+							<p>Email: <a href="mailto:info@swaybar.co.uk" class="text-link">info@swaybar.co.uk</a></p>
+							<p>Phone: <a href="tel:+442036241953" class="text-link">0203 624 1953</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{% include 'components/brand-tiles' %}
+		</main>
+
+		{% include 'components/footer' %}
+	</body>
+</html>

@@ -7,11 +7,9 @@
 .d-none {
 	display: none;
 }
-
 .pos-relative {
 	position: relative;
 }
-
 .text-center {
 	text-align: center;
 }
@@ -29,6 +27,24 @@
 }
 .text-lg {
 	font-size: 1.5rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+	gap: 6rem;
+}
+.col-8 {
+    grid-column: span 8;
+}
+.col-7 {
+    grid-column: span 7;
+}
+.col-5 {
+    grid-column: span 5;
+}
+.col-4 {
+    grid-column: span 4;
 }
 
 .border-top {
@@ -76,4 +92,14 @@
 }
 .pb-4 {
 	padding-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+	.row {
+		gap: 2rem;
+	}
+	.col-4, .col-5, .col-7, .col-8 {
+		grid-column: span 12;
+	}
+
 }

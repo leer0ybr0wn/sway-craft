@@ -60,7 +60,7 @@ p {
 	text-wrap: pretty;
 }
 
-img, svg, video {
+img, svg, video, iframe {
 	max-width: 100%;
 	height: auto;
 	display: block;
@@ -564,6 +564,32 @@ section.content {
 	left: 4rem;
 }
 
+.contact-form {
+	input, textarea {
+		width: 100%;
+		padding: 0.5rem;
+		margin-bottom: 1rem;
+		border: 1px solid #fff2;
+		border-radius: 0.25rem;
+		color: #eee;
+		background-color: #fff2;
+		transition: all 0.2s ease;
+		&:hover {
+			background-color: #fff4;
+		}
+		&:focus, &:active {
+			color: #333;
+			outline: none;
+			background-color: #fff;
+		}
+	}
+}
+
+.google-map {
+	aspect-ratio: 1;
+	border-radius: 0.25rem;
+}
+
 
 /* Mobile styles */
 
@@ -666,6 +692,7 @@ section.content {
 	.sway-ext {
 		padding-inline: 0;
 	}
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

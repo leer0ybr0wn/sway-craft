@@ -1,4 +1,4 @@
-dateModified: 1790793772
+dateModified: 1791469929
 email:
   fromEmail: lee.p.taylor@gmail.com
   fromName: Sway
@@ -14,6 +14,11 @@ meta:
     d8020632-cefd-4b40-ad8e-c8f3a1c19768: 'Club Rehab' # Club Rehab
     e2c58071-a3ea-4b02-b05c-52d7d925c07b: 'Site Settings' # Site Settings
     f454e319-a7ab-44c4-828f-a633bd10fa4e: 'Site Config' # Site Config
+plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
