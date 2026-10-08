@@ -661,6 +661,7 @@ section.content {
 
 	.brand-list {
 		gap: 1rem;
+		margin-block: 0;
 	}
 	.sway-ext {
 		padding-inline: 0;
