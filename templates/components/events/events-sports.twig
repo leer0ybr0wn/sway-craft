@@ -5,22 +5,32 @@
 	{'team': 'Manchester City', 'badge': '/assets/img/temp/badge-mancity.svg', color: '#48f'}
 ] %}
 
-<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}" class="event-block brand-font sports">
-	<img src="/assets/img/swaysports.svg" alt="Sway Sports">
-	<div class="event-inner">
-		<div class="p-3">On at Sway Sports</div>
-		<div class="cards">
-			<div class="card" style="--card-color: {{ events[0].color }};">
-				<img src="{{ events[0].badge }}" alt="{{ events[0].team }}">
+{% set eventEndsAt = date({
+    date: '2026-10-10',
+    time: '19:30',
+    timezone: 'Europe/London',
+}) %}
+
+{% if now < eventEndsAt %}
+
+	<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}" class="event-block brand-font sports">
+		<img src="/assets/img/swaysports.svg" alt="Sway Sports">
+		<div class="event-inner">
+			<div class="p-3">On at Sway Sports</div>
+			<div class="cards">
+				<div class="card" style="--card-color: {{ events[0].color }};">
+					<img src="{{ events[0].badge }}" alt="{{ events[0].team }}">
+				</div>
+				<div class="card" style="--card-color: {{ events[1].color }};">
+					<img src="{{ events[1].badge }}" alt="{{ events[1].team }}">
+				</div>
 			</div>
-			<div class="card" style="--card-color: {{ events[1].color }};">
-				<img src="{{ events[1].badge }}" alt="{{ events[1].team }}">
-			</div>
+			<div class="p-3">Live 5:30pm<br>Saturday 10th Oct</div>
 		</div>
-		<div class="p-3">Live 5:30pm<br>Saturday 10th Oct</div>
-	</div>
-	<img src="/assets/img/swaysports.svg" alt="Sway Sports">
-</a>
+		<img src="/assets/img/swaysports.svg" alt="Sway Sports">
+	</a>
+
+{% endif %}
 
 <a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}" class="event-block brand-font sports">
 	<img src="/assets/img/swaysports.svg" alt="Sway Sports">
