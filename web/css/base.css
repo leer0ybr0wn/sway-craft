@@ -568,9 +568,9 @@ section.content {
 	input, textarea {
 		display: block;
 		width: 100%;
-		padding: 6px 8px;
+		padding: 0.5rem;
 		margin-top: 0.25rem;
-		margin-bottom: 1.25rem;
+		margin-bottom: 1.5rem;
 		border: 1px solid #fff2;
 		border-radius: 0.25rem;
 		color: #eee;
