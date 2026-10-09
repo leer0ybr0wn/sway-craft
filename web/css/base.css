@@ -614,6 +614,9 @@ section.content {
 }
 
 @media (max-width: 767px) {
+	h1 {
+		font-size: 2.75rem;
+	}
 	h2 {
 		font-size: 1.5rem;
 	}
