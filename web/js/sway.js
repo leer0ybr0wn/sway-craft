@@ -1,6 +1,6 @@
 // Nav bar bg based on scroll position
 const nav = document.querySelector('nav')
-const getScrollThreshold = () => window.innerWidth / 4
+const getScrollThreshold = () => window.innerWidth / 5
 
 function updateNav() {
   nav.classList.toggle('scrolled', window.scrollY > getScrollThreshold())

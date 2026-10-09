@@ -1,4 +1,4 @@
-dateModified: 1791469929
+dateModified: 1791543357
 email:
   fromEmail: lee.p.taylor@gmail.com
   fromName: Sway
@@ -19,6 +19,12 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Sway'
+      successFlashMessage: 'Thanks! Your message has been sent.'
+      toEmail: lee.p.taylor@gmail.com
 system:
   edition: solo
   live: true
