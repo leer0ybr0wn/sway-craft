@@ -600,10 +600,15 @@ section.content {
 
 .google-map {
 	margin-block: 1.5rem;
+	background-color: #222;
+	border-radius: 0.25rem;
+	overflow: hidden;
 	iframe {
+		width: 100%;
+		height: auto;
 		max-width: 100%;
 		aspect-ratio: 1;
-		border-radius: 0.25rem;
+		display: block;
 	}
 }
 

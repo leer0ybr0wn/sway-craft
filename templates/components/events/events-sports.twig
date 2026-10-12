@@ -1,13 +1,11 @@
 {% set events = [
-	{'team': 'Manchester United', 'badge': '/assets/img/temp/badge-manutd.svg', color: '#700'},
-	{'team': 'Tottenham Hotspur', 'badge': '/assets/img/temp/badge-spurs.svg', color: '#fff'},
-	{'team': 'Liverpool', 'badge': '/assets/img/temp/badge-liverpool.svg', color: '#fff'},
-	{'team': 'Manchester City', 'badge': '/assets/img/temp/badge-mancity.svg', color: '#48f'}
+	{'team': 'Coventry City', 'badge': '/assets/img/temp/badge-ccfc.svg', color: '#8ad4f1'},
+	{'team': 'Newcastle United', 'badge': '/assets/img/temp/badge-nufc.svg', color: '#fff'},
 ] %}
 
 {% set eventEndsAt = date({
-    date: '2026-10-10',
-    time: '19:30',
+    date: '2026-10-12',
+    time: '22:00',
     timezone: 'Europe/London',
 }) %}
 
@@ -25,26 +23,9 @@
 					<img src="{{ events[1].badge }}" alt="{{ events[1].team }}">
 				</div>
 			</div>
-			<div class="p-3">Live 5:30pm<br>Saturday 10th Oct</div>
+			<div class="p-3">Live 8:00pm<br>Monday 12th Oct</div>
 		</div>
 		<img src="/assets/img/swaysports.svg" alt="Sway Sports">
 	</a>
 
 {% endif %}
-
-<a href="{{ craft.app.sites.getSiteByHandle('swaySports').baseUrl }}" class="event-block brand-font sports">
-	<img src="/assets/img/swaysports.svg" alt="Sway Sports">
-	<div class="event-inner">
-		<div class="p-3">On at Sway Sports</div>
-		<div class="cards">
-			<div class="card" style="--card-color: {{ events[2].color }};">
-				<img src="{{ events[2].badge }}" alt="{{ events[2].team }}">
-			</div>
-			<div class="card" style="--card-color: {{ events[3].color }};">
-				<img src="{{ events[3].badge }}" alt="{{ events[3].team }}">
-			</div>
-		</div>
-		<div class="p-3">Live 4:30pm<br>Sunday 11th Oct</div>
-	</div>
-	<img src="/assets/img/swaysports.svg" alt="Sway Sports">
-</a>
