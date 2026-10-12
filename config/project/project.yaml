@@ -1,8 +1,16 @@
-dateModified: 1791543357
+dateModified: 1791809995
 email:
-  fromEmail: lee.p.taylor@gmail.com
-  fromName: Sway
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: website@swaylondon.co.uk
+  fromName: 'Sway London'
+  replyToEmail: info@swaybar.co.uk
+  template: null
+  transportSettings:
+    host: smtp.ionos.co.uk
+    password: Goh5Aebi9@aghae0
+    port: '587'
+    useAuthentication: '1'
+    username: website@swaylondon.co.uk
+  transportType: craft\mail\transportadapters\Smtp
 meta:
   __names__:
     0ecc4649-2065-4d81-8c5b-2ae205b9a325: 'Bucé Noire' # Bucé Noire
