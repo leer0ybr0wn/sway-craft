@@ -21,8 +21,15 @@ Event::on(Mailer::class, Mailer::EVENT_BEFORE_SEND, function(SendEvent $event) {
     $token = $request->getBodyParam('g-recaptcha-response');
     $secret = App::env('RECAPTCHA_SECRET_KEY');
 
-    if (!$secret || !$token) {
+    // Missing token likely means a bot skipped the JS challenge, treat as spam
+    if (!$token) {
         $event->isSpam = true;
+        return;
+    }
+
+    // Misconfiguration isn't the submitter's fault, fail open so the message still sends
+    if (!$secret) {
+        Craft::error('RECAPTCHA_SECRET_KEY is not set, skipping reCAPTCHA verification.', __METHOD__);
         return;
     }
 
@@ -37,8 +44,8 @@ Event::on(Mailer::class, Mailer::EVENT_BEFORE_SEND, function(SendEvent $event) {
         ]);
         $result = json_decode((string)$response->getBody(), true);
     } catch (\Throwable $e) {
-        Craft::warning('reCAPTCHA verification request failed: ' . $e->getMessage(), __METHOD__);
-        $event->isSpam = true;
+        // Can't complete verification, fail open rather than silently losing a real submission
+        Craft::error('reCAPTCHA verification request failed: ' . $e->getMessage(), __METHOD__);
         return;
     }
 
