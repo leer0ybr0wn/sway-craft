@@ -1,4 +1,4 @@
-dateModified: 1791809995
+dateModified: 1791811129
 email:
   fromEmail: website@swaylondon.co.uk
   fromName: 'Sway London'
@@ -29,7 +29,7 @@ plugins:
     schemaVersion: 1.0.0
     settings:
       allowAttachments: ''
-      prependSender: 'On behalf of'
+      prependSender: From
       prependSubject: 'New message from Sway'
       successFlashMessage: 'Thanks! Your message has been sent.'
       toEmail: lee.p.taylor@gmail.com
