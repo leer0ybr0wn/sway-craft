@@ -32,7 +32,7 @@ plugins:
       prependSender: From
       prependSubject: 'New message from Sway'
       successFlashMessage: 'Thanks! Your message has been sent.'
-      toEmail: info@swaybar.co.uk
+      toEmail: lee.p.taylor@gmail.com
 system:
   edition: solo
   live: true
