@@ -1,0 +1,88 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  6b176ccc-f44a-4e33-92b2-63d3b7db4c39:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-13T09:41:15+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: Name
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3429f960-a85a-4ba9-bb78-a0838ffa9147
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:03:53+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4f47a9d5-5c64-4809-b749-62c43df5a08b # Badge
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 17fc9881-e3c5-409d-ba4d-d7e8ea6dc195
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:03:53+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e27d9a02-f0b4-44c4-a65f-92059970ad95 # Team Colour
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae041f2c-c156-4f3d-a58b-503c68aa9cb0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: edfe517b-fc0c-45a5-bdc5-f00c401322dc
+        userCondition: null
+    thumbFieldKey: null
+handle: team
+hasTitleField: true
+icon: people-group
+name: Team
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: eventEnabled
+instructions: null
+name: 'Event Enabled'
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

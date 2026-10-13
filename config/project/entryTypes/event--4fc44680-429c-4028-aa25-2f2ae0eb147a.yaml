@@ -1,0 +1,258 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  6162db48-f280-435d-86dc-f3a70b3bbc99:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-13T09:18:10+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bce7c035-808d-4631-aac5-0bd1e62c4176
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 170ce450-a60b-4873-afe0-0bfd03c84adb # Venue
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae68f7c0-1bcd-4bff-9c65-6ca6bf764634
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 44312bae-737b-46ca-8c99-9f0f3b6b1cfe # Start Time
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f279369-22fb-48f5-94b1-c374b5c29c53
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5f90302a-54b7-49f2-98a2-3ea09ee997a8 # End Time
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eaa51d6a-a665-46d8-8888-905216df89c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 69e19c1d-9b9c-4a05-bfba-f1276e304562 # Home Team
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 36354477-c035-4b8e-8931-0ebc0b49e9c4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:47:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d72151c1-dc7f-48f8-b7bd-a1d946537423 # Home Team Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 397eba76-4b14-4f28-8d0f-ea55870b2133
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 777220a8-aa15-4d99-b324-d90128698494 # Away Team
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc392701-608f-46a5-805c-f99a7fa3d4fd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:47:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 586704e4-df52-4e45-9c3d-5f2e11a538a3 # Away Team Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b0c5db7-b0db-4968-ae4f-4493e76f50c0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 32205f52-dab7-4042-bdd7-d12a8e4f205d # Competition
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ff4eed6-a742-4589-a12c-c82def2f1709
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b1e88938-6544-4b0b-a04c-c08bb0062363 # CTA Link
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1f13b9ba-4ff6-4973-8e71-3cf49e18c23d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8a0a99ac-faf5-49be-afc3-3761342ea25c # Event Enabled
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e611e674-48e8-4e73-a581-a684508c4d08
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T10:24:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 700f3dd6-3aeb-4248-a97a-c0fe3819513c # Import ID
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ac38fc0a-ec20-4031-8c85-86b2b6460041
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a716d8e3-3f54-4175-9f35-eef33292e511
+        userCondition: null
+    thumbFieldKey: null
+handle: event
+hasTitleField: true
+icon: calendar-day
+name: Event
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: "{{ (homeTeamText ?: homeTeam.one().title) ~ ((homeTeamText ?: homeTeam.one().title) and (awayTeamText ?: awayTeam.one().title) ? ' vs ' : '') ~ (awayTeamText ?: awayTeam.one().title) }}"
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

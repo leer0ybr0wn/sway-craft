@@ -1,0 +1,10 @@
+columnSuffix: null
+handle: teamColour
+instructions: null
+name: 'Team Colour'
+searchable: false
+settings:
+  allowCustomColors: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color
