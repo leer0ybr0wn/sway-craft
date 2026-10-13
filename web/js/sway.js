@@ -23,14 +23,13 @@ const container = document.querySelector('.event-container')
 if (container) {
   const blocks = Array.from(container.querySelectorAll('.event-block'))
 
-  // clone the first block onto the end so the carousel can keep scrolling forward
-  const clone = blocks[0].cloneNode(true)
-  container.appendChild(clone)
-
-  const slides = [...blocks, clone]
+  // only clone for the loop illusion when there's more than one real slide to loop through
+  const slides = blocks.length > 1 ? [...blocks, blocks[0].cloneNode(true)] : blocks
+  if (slides.length > blocks.length) container.appendChild(slides[slides.length - 1])
   let index = 0
 
-  setInterval(() => {
+  // nothing to carousel with 0 or 1 real event banners
+  if (slides.length > 1) setInterval(() => {
       // wrap with modulo so a throttled background tab can't push index past the last slide
       index = (index + 1) % slides.length
       container.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' })

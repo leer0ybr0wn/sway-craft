@@ -211,23 +211,6 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 8a0a99ac-faf5-49be-afc3-3761342ea25c # Event Enabled
-            handle: null
-            instructions: null
-            label: null
-            oldFieldUid: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e611e674-48e8-4e73-a581-a684508c4d08
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-10-13T10:24:21+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
             fieldUid: 700f3dd6-3aeb-4248-a97a-c0fe3819513c # Import ID
             handle: null
             instructions: null
@@ -237,6 +220,23 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ac38fc0a-ec20-4031-8c85-86b2b6460041
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-13T13:31:50+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8a0a99ac-faf5-49be-afc3-3761342ea25c # Event Enabled
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 529959f5-8df7-414e-8920-8aca56b4a34a
             userCondition: null
             warning: null
             width: 100
