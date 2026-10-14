@@ -1,4 +1,4 @@
-dateModified: 1791986428
+dateModified: 1791987764
 elementSources:
   craft\elements\Entry:
     -
@@ -113,7 +113,7 @@ email:
   template: null
   transportSettings:
     host: smtp.ionos.co.uk
-    password: Goh5Aebi9@aghae0
+    password: $EMAIL_PASSWORD
     port: '587'
     useAuthentication: '1'
     username: website@swaylondon.co.uk
