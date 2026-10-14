@@ -612,6 +612,18 @@ section.content {
 	}
 }
 
+.concepts {
+	img {
+		width: 100%;
+	}
+	.row {
+		gap: 2rem;
+	}
+	> *:not(:last-child) {
+		margin-bottom: 6rem;
+	}
+}
+
 
 /* Mobile styles */
 
@@ -666,7 +678,7 @@ section.content {
 			opacity: 1;
 		}
 	}
-	.video-container {
+	.video-container, .nav-margin {
 		margin-top: 3.5rem;
 	}
 
@@ -716,6 +728,11 @@ section.content {
 	}
 	.sway-ext {
 		padding-inline: 0;
+	}
+	.concepts {
+		> *:not(:last-child) {
+			margin-bottom: 2.5rem;
+		}
 	}
 
 }

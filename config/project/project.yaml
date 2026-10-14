@@ -1,4 +1,111 @@
-dateModified: 1791898310
+dateModified: 1791986428
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      page: Entries
+      type: native
+    -
+      key: singles
+      page: Entries
+      type: native
+    -
+      heading: Channels
+      key: 'heading:c9bdff09-74f6-4ce4-8eeb-35c8fbf487eb'
+      page: Entries
+      type: heading
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\fields\conditions\OptionsFieldConditionRule
+            fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+            layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+            operator: in
+            uid: af6ec4d1-edd7-409f-8b45-fbe35ce0c490
+            values:
+              - football
+          -
+            class: craft\fields\conditions\DateFieldConditionRule
+            endDate: null
+            fieldUid: 44312bae-737b-46ca-8c99-9f0f3b6b1cfe # Start Time
+            layoutElementUid: 2f279369-22fb-48f5-94b1-c374b5c29c53
+            periodType: hoursAgo
+            periodValue: 2.0
+            rangeType: after
+            startDate: null
+            uid: ab4ff20e-182d-4fdf-bdfa-d18051d5869e
+          -
+            class: craft\elements\conditions\entries\TypeConditionRule
+            operator: in
+            uid: a1e47a3c-25db-45e6-a6d7-94befe3797b0
+            values:
+              - 4fc44680-429c-4028-aa25-2f2ae0eb147a # Event
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - 'field:44312bae-737b-46ca-8c99-9f0f3b6b1cfe' # Start Time
+        - asc
+      defaultViewMode: ''
+      key: 'custom:26635644-4024-4189-922c-761a204b1117'
+      label: 'Football Matches'
+      page: Entries
+      tableAttributes:
+        - 'field:8a0a99ac-faf5-49be-afc3-3761342ea25c' # Event Enabled
+        - 'field:44312bae-737b-46ca-8c99-9f0f3b6b1cfe' # Start Time
+        - 'field:5f90302a-54b7-49f2-98a2-3ea09ee997a8' # End Time
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\fields\conditions\OptionsFieldConditionRule
+            fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+            layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+            operator: ni
+            uid: 2a73bf0c-3523-4725-8f65-304dd8198b7e
+            values:
+              - football
+          -
+            class: craft\elements\conditions\entries\TypeConditionRule
+            operator: in
+            uid: 5fb52276-8598-40e0-8ad6-f31359580d71
+            values:
+              - 4fc44680-429c-4028-aa25-2f2ae0eb147a # Event
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      key: 'custom:1036ac3c-1d30-4afb-bc65-4816fc2c9b9e'
+      label: 'Other Events'
+      page: Entries
+      tableAttributes:
+        - dateCreated
+        - 'field:44312bae-737b-46ca-8c99-9f0f3b6b1cfe' # Start Time
+        - 'field:170ce450-a60b-4873-afe0-0bfd03c84adb' # Venue
+      type: custom
+    -
+      defaultSort:
+        - 'field:44312bae-737b-46ca-8c99-9f0f3b6b1cfe' # Start Time
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:19059e89-4cb3-4400-9626-aa90bd16dca6' # Events
+      page: Entries
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'section:a381a1be-514c-4d1f-94ec-9f834d8d10c1' # Teams
+      page: Entries
+      type: native
 email:
   fromEmail: website@swaylondon.co.uk
   fromName: 'Sway London'
@@ -30,11 +137,12 @@ meta:
     19059e89-4cb3-4400-9626-aa90bd16dca6: Events # Events
     32205f52-dab7-4042-bdd7-d12a8e4f205d: Competition # Competition
     44312bae-737b-46ca-8c99-9f0f3b6b1cfe: 'Start Time' # Start Time
-    586704e4-df52-4e45-9c3d-5f2e11a538a3: 'Away Team Text' # Away Team Text
+    586704e4-df52-4e45-9c3d-5f2e11a538a3: 'Competitor 2' # Competitor 2
     777220a8-aa15-4d99-b324-d90128698494: 'Away Team' # Away Team
     a381a1be-514c-4d1f-94ec-9f834d8d10c1: Teams # Teams
     b1e88938-6544-4b0b-a04c-c08bb0062363: 'CTA Link' # CTA Link
-    d72151c1-dc7f-48f8-b7bd-a1d946537423: 'Home Team Text' # Home Team Text
+    b522fb5f-aef9-4e1b-b9fe-8695a1108b6e: 'Promo Text' # Promo Text
+    d72151c1-dc7f-48f8-b7bd-a1d946537423: 'Competitor 1' # Competitor 1
     d8020632-cefd-4b40-ad8e-c8f3a1c19768: 'Club Rehab' # Club Rehab
     dc20f33e-e8ec-491b-8da5-fa53649b9086: 'Event Category' # Event Category
     e2c58071-a3ea-4b02-b05c-52d7d925c07b: 'Site Settings' # Site Settings

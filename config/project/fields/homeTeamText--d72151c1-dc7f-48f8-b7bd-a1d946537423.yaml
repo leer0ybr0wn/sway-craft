@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: homeTeamText
-instructions: "Input here if team doesn't appear in the database"
-name: 'Home Team Text'
+instructions: 'Single competitor or team'
+name: 'Competitor 1'
 searchable: false
 settings:
   byteLimit: null

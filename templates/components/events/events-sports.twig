@@ -10,46 +10,46 @@
 	.with(['homeTeam', 'awayTeam'])
 	.all() %}
 
-{% for event in venueEvents %}
-	{# No End Time entered: default to 2 hours after Start Time #}
-	{% set effectiveEndTime = event.endTime ?: (event.startTime ? event.startTime|date_modify('+2 hours') : null) %}
-	{# No Start/End Time at all means an indefinite item (e.g. an evergreen promo): always show it #}
-	{% if effectiveEndTime is null or effectiveEndTime > now %}
-		{% set category = event.eventCategory ? event.eventCategory.value : null %}
-		{% set isFixture = category in ['football', 'boxing', 'otherSport'] %}
-		{% set homeTeam = event.homeTeam.one() %}
-		{% set awayTeam = event.awayTeam.one() %}
-		{% set homeTeamName = event.homeTeamText ?: (homeTeam ? homeTeam.title : null) %}
-		{% set awayTeamName = event.awayTeamText ?: (awayTeam ? awayTeam.title : null) %}
-		{% set homeBadge = homeTeam and homeTeam.badge ? homeTeam.badge : badgePlaceholder %}
-		{% set awayBadge = awayTeam and awayTeam.badge ? awayTeam.badge : badgePlaceholder %}
-		{% set homeColour = homeTeam and homeTeam.teamColour ? homeTeam.teamColour : '#fff' %}
-		{% set awayColour = awayTeam and awayTeam.teamColour ? awayTeam.teamColour : '#fff' %}
-		{% set displayTitle = isFixture
+{# No End/Start Time at all means an indefinite item (e.g. an evergreen promo): always show it. No End Time: default to 2 hours after Start Time #}
+{% set upcomingEvents = venueEvents
+	|filter(event => (event.endTime ?: (event.startTime ? event.startTime|date_modify('+2 hours') : null)) is null or (event.endTime ?: (event.startTime ? event.startTime|date_modify('+2 hours') : null)) > now)
+	|slice(0, 2) %}
+
+{% for event in upcomingEvents %}
+	{% set category = event.eventCategory ? event.eventCategory.value : null %}
+	{% set isFixture = category in ['football', 'boxing', 'otherSport'] %}
+	{% set homeTeam = event.homeTeam.one() %}
+	{% set awayTeam = event.awayTeam.one() %}
+	{% set homeTeamName = event.homeTeamText ?: (homeTeam ? homeTeam.title : null) %}
+	{% set awayTeamName = event.awayTeamText ?: (awayTeam ? awayTeam.title : null) %}
+	{% set homeBadge = homeTeam and homeTeam.badge ? homeTeam.badge : badgePlaceholder %}
+	{% set awayBadge = awayTeam and awayTeam.badge ? awayTeam.badge : badgePlaceholder %}
+	{% set homeColour = homeTeam and homeTeam.teamColour ? homeTeam.teamColour : '#fff' %}
+	{% set awayColour = awayTeam and awayTeam.teamColour ? awayTeam.teamColour : '#fff' %}
+	{% set displayTitle = isFixture
 		? (homeTeamName and awayTeamName ? homeTeamName ~ ' vs ' ~ awayTeamName : (homeTeamName ?: awayTeamName ?: event.title))
 		: event.title %}
 
-		<a href="{{ event.ctaLink ?: site.baseUrl }}" class="event-block brand-font sports">
-			<img src="/assets/img/swaysports.svg" alt="Sway Sports">
-			<div class="event-inner">
-				<div class="p-3">
-					On At Sway Sports<br>
-					{{ displayTitle }}
-					{% if event.competition %}<br>{{ event.competition }}{% endif %}
-				</div>
-				<div class="cards">
-					{% if isFixture %}
-						<div class="card" style="--card-color: {{ homeColour }};">
-							<img src="{{ homeBadge }}" alt="{{ homeTeamName ?: 'Home team' }}">
-						</div>
-						<div class="card" style="--card-color: {{ awayColour }};">
-							<img src="{{ awayBadge }}" alt="{{ awayTeamName ?: 'Away team' }}">
-						</div>
-					{% endif %}
-				</div>
-				<div class="p-3">{% if event.startTime %}Live {{ event.startTime|date('g:ia', 'Europe/London') }}<br>{{ event.startTime|date('l jS M', 'Europe/London') }}{% endif %}</div>
+	<a href="{{ event.ctaLink ?: site.baseUrl }}" class="event-block brand-font sports">
+		<img src="/assets/img/swaysports.svg" alt="Sway Sports">
+		<div class="event-inner">
+			<div class="p-3">
+				On At Sway Sports<br>
+				{{ displayTitle }}
+				{% if event.competition %}<br>{{ event.competition }}{% endif %}
 			</div>
-			<img src="/assets/img/swaysports.svg" alt="Sway Sports">
-		</a>
-	{% endif %}
+			<div class="cards">
+				{% if isFixture %}
+					<div class="card" style="--card-color: {{ homeColour }};">
+						<img src="{{ homeBadge }}" alt="{{ homeTeamName ?: 'Home team' }}">
+					</div>
+					<div class="card" style="--card-color: {{ awayColour }};">
+						<img src="{{ awayBadge }}" alt="{{ awayTeamName ?: 'Away team' }}">
+					</div>
+				{% endif %}
+			</div>
+			<div class="p-3">{% if event.startTime %}Live {{ event.startTime|date('g:ia', 'Europe/London') }}<br>{{ event.startTime|date('l jS M', 'Europe/London') }}{% endif %}</div>
+		</div>
+		<img src="/assets/img/swaysports.svg" alt="Sway Sports">
+	</a>
 {% endfor %}

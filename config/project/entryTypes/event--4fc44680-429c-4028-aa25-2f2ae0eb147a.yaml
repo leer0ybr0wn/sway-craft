@@ -29,7 +29,7 @@ fieldLayouts:
             required: true
             size: null
             step: null
-            tip: null
+            tip: 'If a sports event, this will be populated with both teams'
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: bce7c035-808d-4631-aac5-0bd1e62c4176
@@ -46,7 +46,7 @@ fieldLayouts:
             instructions: null
             label: null
             oldFieldUid: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
@@ -63,7 +63,7 @@ fieldLayouts:
             instructions: null
             label: null
             oldFieldUid: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ae68f7c0-1bcd-4bff-9c65-6ca6bf764634
@@ -86,7 +86,7 @@ fieldLayouts:
             uid: 2f279369-22fb-48f5-94b1-c374b5c29c53
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2026-10-13T10:24:21+00:00'
             editCondition: null
@@ -103,11 +103,24 @@ fieldLayouts:
             uid: eaa51d6a-a665-46d8-8888-905216df89c9
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2026-10-13T10:24:21+00:00'
             editCondition: null
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+                  layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+                  operator: in
+                  uid: 8da06f3c-da6d-453c-983f-e53f000123f7
+                  values:
+                    - football
+                    - otherSport
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
             fieldUid: 69e19c1d-9b9c-4a05-bfba-f1276e304562 # Home Team
             handle: null
@@ -124,9 +137,22 @@ fieldLayouts:
           -
             dateAdded: '2026-10-13T10:47:57+00:00'
             editCondition: null
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+                  layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+                  operator: in
+                  uid: 6da18484-ae37-49da-90e4-0f9dd3de1a6f
+                  values:
+                    - boxing
+                    - otherSport
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
-            fieldUid: d72151c1-dc7f-48f8-b7bd-a1d946537423 # Home Team Text
+            fieldUid: d72151c1-dc7f-48f8-b7bd-a1d946537423 # Competitor 1
             handle: null
             instructions: null
             label: null
@@ -141,7 +167,20 @@ fieldLayouts:
           -
             dateAdded: '2026-10-13T10:24:21+00:00'
             editCondition: null
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+                  layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+                  operator: in
+                  uid: 237b8111-c3a6-4779-b698-baa74fddf1f4
+                  values:
+                    - football
+                    - otherSport
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
             fieldUid: 777220a8-aa15-4d99-b324-d90128698494 # Away Team
             handle: null
@@ -158,9 +197,22 @@ fieldLayouts:
           -
             dateAdded: '2026-10-13T10:47:57+00:00'
             editCondition: null
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+                  layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+                  operator: in
+                  uid: b1cc1a25-9f89-4468-aa30-8b7de9c168d3
+                  values:
+                    - boxing
+                    - otherSport
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
-            fieldUid: 586704e4-df52-4e45-9c3d-5f2e11a538a3 # Away Team Text
+            fieldUid: 586704e4-df52-4e45-9c3d-5f2e11a538a3 # Competitor 2
             handle: null
             instructions: null
             label: null
@@ -173,9 +225,51 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-10-14T13:38:18+00:00'
+            editCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+                  layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+                  operator: in
+                  uid: c056af6e-952d-449f-8a8f-a02da6364744
+                  values:
+                    - clubNight
+                    - promotion
+              elementType: craft\elements\Entry
+              fieldContext: global
+            elementEditCondition: null
+            fieldUid: b522fb5f-aef9-4e1b-b9fe-8695a1108b6e # Promo Text
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: b522fb5f-aef9-4e1b-b9fe-8695a1108b6e # Promo Text
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b34bbcd7-523a-4600-b87b-606de9e00556
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-10-13T10:24:21+00:00'
             editCondition: null
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: dc20f33e-e8ec-491b-8da5-fa53649b9086 # Event Category
+                  layoutElementUid: 349f344d-8eb3-4cf1-86b6-dff5214b9ef1
+                  operator: in
+                  uid: b685fa81-baed-4ca1-a915-8d536409b1d1
+                  values:
+                    - football
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
             fieldUid: 32205f52-dab7-4042-bdd7-d12a8e4f205d # Competition
             handle: null

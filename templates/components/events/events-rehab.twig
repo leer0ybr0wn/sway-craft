@@ -29,11 +29,12 @@
 			<div class="event-inner">
 				<div class="p-3">
 					{{ displayTitle }}
-					{% if event.competition %}<br>{{ event.competition }}{% endif %}
 				</div>
 				<div class="p-3">{% if event.startTime %}{{ event.startTime|date('g:ia', 'Europe/London') }}<br>
 						{{ event.startTime|date('l jS M', 'Europe/London') }}{% endif %}
-					Night Club &amp; Events Space
+					{% if event.promoText %}
+						{{ event.promoText }}
+					{% endif %}
 				</div>
 			</div>
 			<img src="/assets/img/rehab.svg" alt="Enter Rehab">

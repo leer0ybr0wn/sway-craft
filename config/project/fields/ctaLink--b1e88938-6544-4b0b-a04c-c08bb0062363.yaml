@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: ctaLink
-instructions: null
+instructions: 'Where this banner will link to. Defaults to its venue page'
 name: 'CTA Link'
 searchable: false
 settings:

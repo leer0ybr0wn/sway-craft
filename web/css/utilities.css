@@ -40,6 +40,9 @@
 .col-7 {
     grid-column: span 7;
 }
+.col-6 {
+    grid-column: span 6;
+}
 .col-5 {
     grid-column: span 5;
 }
