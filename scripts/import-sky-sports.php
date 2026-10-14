@@ -152,6 +152,7 @@ $created = 0;
 $updated = 0;
 $skipped = 0;
 $ignoredPast = 0;
+$ignoredNotOnSky = 0;
 $now = new DateTimeImmutable();
 
 foreach ($events as $props) {
@@ -166,10 +167,13 @@ foreach ($events as $props) {
 
     [$homeTeamName, $awayTeamName] = array_pad(preg_split('/\s+v\s+/', $summary, 2), 2, null);
 
-    $competition = null;
-    if (isset($props['DESCRIPTION']['value'])) {
-        $descParts = array_map('trim', explode(' - ', unescapeIcsText($props['DESCRIPTION']['value'])));
-        $competition = $descParts[2] ?? null;
+    $description = isset($props['DESCRIPTION']['value']) ? unescapeIcsText($props['DESCRIPTION']['value']) : '';
+    $competition = array_map('trim', explode(' - ', $description))[2] ?? null;
+
+    // The feed lists every PL fixture; only ones with a "Live on Sky Sports ..." credit are actually televised.
+    if (!str_contains($description, 'Live on Sky Sports')) {
+        $ignoredNotOnSky++;
+        continue;
     }
 
     $startTime = parseIcsDateTime($dtstart['value'], $dtstart['params']);
@@ -220,5 +224,5 @@ foreach ($events as $props) {
     $isNew ? $created++ : $updated++;
 }
 
-echo ($dryRun ? '[dry-run] ' : '') . "Created: {$created}, Updated: {$updated}, Skipped: {$skipped}, Ignored (past): {$ignoredPast}\n";
+echo ($dryRun ? '[dry-run] ' : '') . "Created: {$created}, Updated: {$updated}, Skipped: {$skipped}, Ignored (past): {$ignoredPast}, Ignored (not on Sky): {$ignoredNotOnSky}\n";
 exit(0);

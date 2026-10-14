@@ -16,6 +16,7 @@
 	|slice(0, 2) %}
 
 {% for event in upcomingEvents %}
+	{% set displayTitle = event.title %}
 	{% set category = event.eventCategory ? event.eventCategory.value : null %}
 	{% set isFixture = category in ['football', 'boxing', 'otherSport'] %}
 	{% set homeTeam = event.homeTeam.one() %}
@@ -26,29 +27,27 @@
 	{% set awayBadge = awayTeam and awayTeam.badge ? awayTeam.badge : badgePlaceholder %}
 	{% set homeColour = homeTeam and homeTeam.teamColour ? homeTeam.teamColour : '#fff' %}
 	{% set awayColour = awayTeam and awayTeam.teamColour ? awayTeam.teamColour : '#fff' %}
-	{% set displayTitle = isFixture
-		? (homeTeamName and awayTeamName ? homeTeamName ~ ' vs ' ~ awayTeamName : (homeTeamName ?: awayTeamName ?: event.title))
-		: event.title %}
+	
 
 	<a href="{{ event.ctaLink ?: site.baseUrl }}" class="event-block brand-font sports">
 		<img src="/assets/img/swaysports.svg" alt="Sway Sports">
 		<div class="event-inner">
-			<div class="p-3">
+			<div>
 				On At Sway Sports<br>
 				{{ displayTitle }}
-				{% if event.competition %}<br>{{ event.competition }}{% endif %}
+				{# {% if event.competition %}<br>{{ event.competition }}{% endif %} #}
 			</div>
 			<div class="cards">
 				{% if isFixture %}
 					<div class="card" style="--card-color: {{ homeColour }};">
-						<img src="{{ homeBadge }}" alt="{{ homeTeamName ?: 'Home team' }}">
+						<img src="{{ homeBadge }}" alt="{{ homeTeam ?: 'Home team' }}">
 					</div>
 					<div class="card" style="--card-color: {{ awayColour }};">
-						<img src="{{ awayBadge }}" alt="{{ awayTeamName ?: 'Away team' }}">
+						<img src="{{ awayBadge }}" alt="{{ awayTeam ?: 'Away team' }}">
 					</div>
 				{% endif %}
 			</div>
-			<div class="p-3">{% if event.startTime %}Live {{ event.startTime|date('g:ia', 'Europe/London') }}<br>{{ event.startTime|date('l jS M', 'Europe/London') }}{% endif %}</div>
+			<div>{% if event.startTime %}Live {{ event.startTime|date('g:ia', 'Europe/London') }}<br>{{ event.startTime|date('l jS M', 'Europe/London') }}{% endif %}</div>
 		</div>
 		<img src="/assets/img/swaysports.svg" alt="Sway Sports">
 	</a>
