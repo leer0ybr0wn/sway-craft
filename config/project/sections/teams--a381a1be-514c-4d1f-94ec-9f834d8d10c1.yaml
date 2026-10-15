@@ -29,7 +29,7 @@ siteSettings:
     hasUrls: true
     template: teams/_entry.twig
     uriFormat: 'teams/{slug}'
-  2814e29f-07a8-4d8b-8812-f71726b8e852: # Sway
+  2814e29f-07a8-4d8b-8812-f71726b8e852: # Sway London
     enabledByDefault: true
     hasUrls: true
     template: teams/_entry.twig

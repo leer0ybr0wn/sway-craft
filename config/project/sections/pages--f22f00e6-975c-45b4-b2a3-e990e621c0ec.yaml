@@ -1,0 +1,42 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 0f0d3560-69e1-474e-b826-392ef2549a7a # Page
+handle: pages
+maxAuthors: 1
+minAuthors: 1
+name: Pages
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: none
+siteSettings:
+  0ecc4649-2065-4d81-8c5b-2ae205b9a325: # Bucé Noire
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry.twig
+    uriFormat: 'pages/{slug}'
+  2b861e07-4793-454e-b381-2766fd4e9352: # The Red Room
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry.twig
+    uriFormat: 'pages/{slug}'
+  3d4415ad-8da1-48d6-a08d-defd31f35ffb: # Sway Sports
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry.twig
+    uriFormat: 'pages/{slug}'
+  2814e29f-07a8-4d8b-8812-f71726b8e852: # Sway London
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry.twig
+    uriFormat: 'pages/{slug}'
+  d8020632-cefd-4b40-ad8e-c8f3a1c19768: # Club Rehab
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry.twig
+    uriFormat: 'pages/{slug}'
+type: channel

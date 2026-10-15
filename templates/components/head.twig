@@ -1,7 +1,12 @@
 <head>
+	{# Per-site "pages" entry supplying CMS-managed pageTitle/pageDescription, keyed by the slug passed in #}
+	{% set pageEntry = pageSlug ? craft.entries().section('pages').slug(pageSlug).site(currentSite.handle).one() : null %}
+	{% set fallbackDescription = 'Discover Sway London in Covent Garden: a late-night club, live sports bar and restaurant, plus flexible private event spaces. Book a table or enquire about hire.' %}
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ currentSite.name }} | {{ pageTitle|default('Home') }}</title>
+	<title>{{ currentSite.name }} | {{ pageEntry.pageTitle ?? pageTitle ?? 'Home' }}</title>
+	<meta name="description" content="{{ pageEntry.pageDescription ?? fallbackDescription }}">
 	<link rel="shortcut icon" href="/assets/img/sway-favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="/css/base.css?v=0.24">
 	<link rel="stylesheet" href="/css/utilities.css?v=0.21">

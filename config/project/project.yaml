@@ -1,4 +1,4 @@
-dateModified: 1792056804
+dateModified: 1792085330
 elementSources:
   craft\elements\Entry:
     -
@@ -121,7 +121,10 @@ email:
 meta:
   __names__:
     0ecc4649-2065-4d81-8c5b-2ae205b9a325: 'Bucé Noire' # Bucé Noire
+    0f0d3560-69e1-474e-b826-392ef2549a7a: Page # Page
+    1c5d5d04-1d06-4027-8e5c-8ad1b7568328: 'Page Description' # Page Description
     2b861e07-4793-454e-b381-2766fd4e9352: 'The Red Room' # The Red Room
+    3bf103e7-f8ac-466f-81eb-6ad441cddbcd: 'Page Title' # Page Title
     3d4415ad-8da1-48d6-a08d-defd31f35ffb: 'Sway Sports' # Sway Sports
     4f47a9d5-5c64-4809-b749-62c43df5a08b: Badge # Badge
     4fc44680-429c-4028-aa25-2f2ae0eb147a: Event # Event
@@ -131,7 +134,7 @@ meta:
     170ce450-a60b-4873-afe0-0bfd03c84adb: Venue # Venue
     700f3dd6-3aeb-4248-a97a-c0fe3819513c: 'Import ID' # Import ID
     882f1c31-e9ea-4c46-8b57-691bf741f487: Team # Team
-    2814e29f-07a8-4d8b-8812-f71726b8e852: Sway # Sway
+    2814e29f-07a8-4d8b-8812-f71726b8e852: 'Sway London' # Sway London
     6029d9fc-46ed-45c8-bdcd-250fcf256d67: Sway # Sway
     19059e89-4cb3-4400-9626-aa90bd16dca6: Events # Events
     32205f52-dab7-4042-bdd7-d12a8e4f205d: Competition # Competition
@@ -145,6 +148,7 @@ meta:
     d8020632-cefd-4b40-ad8e-c8f3a1c19768: 'Club Rehab' # Club Rehab
     dc20f33e-e8ec-491b-8da5-fa53649b9086: 'Event Category' # Event Category
     e27d9a02-f0b4-44c4-a65f-92059970ad95: 'Team Colour' # Team Colour
+    f22f00e6-975c-45b4-b2a3-e990e621c0ec: Pages # Pages
 plugins:
   contact-form:
     edition: standard
