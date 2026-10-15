@@ -1,4 +1,4 @@
-dateModified: 1791992670
+dateModified: 1792056804
 elementSources:
   craft\elements\Entry:
     -
@@ -129,7 +129,6 @@ meta:
     8a0a99ac-faf5-49be-afc3-3761342ea25c: 'Event Enabled' # Event Enabled
     69e19c1d-9b9c-4a05-bfba-f1276e304562: 'Home Team' # Home Team
     170ce450-a60b-4873-afe0-0bfd03c84adb: Venue # Venue
-    519b6bd2-10ae-49a7-a612-4e3d6fe539f8: Tagline # Tagline
     700f3dd6-3aeb-4248-a97a-c0fe3819513c: 'Import ID' # Import ID
     882f1c31-e9ea-4c46-8b57-691bf741f487: Team # Team
     2814e29f-07a8-4d8b-8812-f71726b8e852: Sway # Sway
@@ -145,9 +144,7 @@ meta:
     d72151c1-dc7f-48f8-b7bd-a1d946537423: 'Competitor 1' # Competitor 1
     d8020632-cefd-4b40-ad8e-c8f3a1c19768: 'Club Rehab' # Club Rehab
     dc20f33e-e8ec-491b-8da5-fa53649b9086: 'Event Category' # Event Category
-    e2c58071-a3ea-4b02-b05c-52d7d925c07b: 'Site Settings' # Site Settings
     e27d9a02-f0b4-44c4-a65f-92059970ad95: 'Team Colour' # Team Colour
-    f454e319-a7ab-44c4-828f-a633bd10fa4e: 'Site Config' # Site Config
 plugins:
   contact-form:
     edition: standard
