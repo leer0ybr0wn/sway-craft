@@ -1,12 +1,8 @@
-dateModified: 1792085330
+dateModified: 1792144464
 elementSources:
   craft\elements\Entry:
     -
       key: '*'
-      page: Entries
-      type: native
-    -
-      key: singles
       page: Entries
       type: native
     -
@@ -105,6 +101,23 @@ elementSources:
     -
       key: 'section:a381a1be-514c-4d1f-94ec-9f834d8d10c1' # Teams
       page: Entries
+      type: native
+    -
+      heading: Pages
+      key: 'heading:fbef1121-9d66-4b86-a959-a89258ea94f6'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:f22f00e6-975c-45b4-b2a3-e990e621c0ec' # Pages
+      page: Entries
+      tableAttributes:
+        - status
+        - postDate
       type: native
 email:
   fromEmail: website@swaylondon.co.uk
