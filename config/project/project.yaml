@@ -1,4 +1,4 @@
-dateModified: 1792144464
+dateModified: 1792144963
 elementSources:
   craft\elements\Entry:
     -
@@ -48,9 +48,8 @@ elementSources:
       label: 'Football Matches'
       page: Entries
       tableAttributes:
-        - 'field:8a0a99ac-faf5-49be-afc3-3761342ea25c' # Event Enabled
         - 'field:44312bae-737b-46ca-8c99-9f0f3b6b1cfe' # Start Time
-        - 'field:5f90302a-54b7-49f2-98a2-3ea09ee997a8' # End Time
+        - 'field:8a0a99ac-faf5-49be-afc3-3761342ea25c' # Event Enabled
       type: custom
     -
       condition:
@@ -94,13 +93,22 @@ elementSources:
       page: Entries
       tableAttributes:
         - status
-        - postDate
-        - expiryDate
-        - link
+        - 'field:44312bae-737b-46ca-8c99-9f0f3b6b1cfe' # Start Time
+        - 'field:170ce450-a60b-4873-afe0-0bfd03c84adb' # Venue
+        - 'field:8a0a99ac-faf5-49be-afc3-3761342ea25c' # Event Enabled
       type: native
     -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:a381a1be-514c-4d1f-94ec-9f834d8d10c1' # Teams
       page: Entries
+      tableAttributes:
+        - status
+        - 'field:4f47a9d5-5c64-4809-b749-62c43df5a08b' # Badge
+        - 'field:e27d9a02-f0b4-44c4-a65f-92059970ad95' # Team Colour
       type: native
     -
       heading: Pages
