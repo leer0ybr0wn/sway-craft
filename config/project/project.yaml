@@ -130,7 +130,7 @@ elementSources:
 email:
   fromEmail: website@swaylondon.co.uk
   fromName: 'Sway London'
-  replyToEmail: info@swaybar.co.uk
+  replyToEmail: $EMAIL_CONTACT
   template: null
   transportSettings:
     host: smtp.ionos.co.uk
@@ -180,7 +180,7 @@ plugins:
       prependSender: From
       prependSubject: 'New message from Sway'
       successFlashMessage: 'Thanks! Your message has been sent.'
-      toEmail: info@swaybar.co.uk
+      toEmail: $EMAIL_CONTACT
 system:
   edition: solo
   live: true

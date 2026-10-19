@@ -88,7 +88,7 @@
 								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4965.726804290393!2d-0.120357!3d51.515722000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b34d89aa577%3A0x49918db4e2da4cd6!2sSway%20Bar!5e0!3m2!1sen!2suk!4v1791546488686!5m2!1sen!2suk" width="360" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 							</div>
 							<p>Address:<br>61 &ndash; 65 Great Queen Street<br>Covent Garden<br>London<br>WC2B 5BZ</p>
-							<p>Email: <a href="mailto:info@swaybar.co.uk" class="text-link">info@swaybar.co.uk</a></p>
+							<p>Email: <a href="mailto:{{ getenv('EMAIL_CONTACT')|e('html_attr') }}" class="text-link">{{ getenv('EMAIL_CONTACT') }}</a></p>
 							<p>Phone: <a href="tel:+442036241953" class="text-link">0203 624 1953</a></p>
 						</div>
 					</div>
