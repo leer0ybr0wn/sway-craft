@@ -331,6 +331,11 @@ hr {
 .event-single-v2 {
 	background-color: var(--color-sports);
 	padding: 0.75rem 2rem;
+	width: 350px;
+	max-width: 100%;
+	span.vs {
+		text-transform: lowercase;
+	}
 }
 
 .tagline {
