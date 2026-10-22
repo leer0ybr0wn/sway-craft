@@ -255,46 +255,46 @@ hr {
 			padding: 0.75rem 1.5rem;
 		}
 	}
-	
-	.cards {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		position: relative;
-		background-color: #fff;
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0;
-			background: repeating-linear-gradient(
-				45deg, #0001 0, #0001 12px, transparent 12px,	transparent 24px
-			);
-		}
-		&::after {
-			content: 'vs';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	background-color: #fff;
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: repeating-linear-gradient(
+			45deg, #0001 0, #0001 12px, transparent 12px,	transparent 24px
+		);
+	}
+	&::after {
+		content: 'vs';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		aspect-ratio: 1;
+		width: 24px;
+		line-height: 22px;
+		padding-top: 2px;
+		font-size: 12px;
+		letter-spacing: normal;
+		border-radius: 50%;
+		background-color: var(--color-sports-mid);
+	}
+	.card {
+		height: 100%;
+		padding: 0.75rem 1.5rem;
+		background-color: var(--card-color, #fff);
+		> img {
+			width: 3.5rem;
 			aspect-ratio: 1;
-			width: 24px;
-			line-height: 22px;
-			padding-top: 2px;
-			font-size: 12px;
-			letter-spacing: normal;
-			border-radius: 50%;
-			background-color: var(--color-sports-mid);
-		}
-		.card {
-			height: 100%;
-			padding: 0.75rem 1.5rem;
-			background-color: var(--card-color, #fff);
-			> img {
-				width: 3.5rem;
-				aspect-ratio: 1;
-				object-fit: contain;
-				position: relative;
-				z-index: 10;
-			}
+			object-fit: contain;
+			position: relative;
+			z-index: 10;
 		}
 	}
 }
@@ -317,6 +317,15 @@ hr {
 			text-wrap: pretty;
 		}
 	}
+}
+
+.tagline-bg {
+	background-image: url('/assets/img/sway-exterior.jpg');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-top: 6rem;
+	padding-bottom: 12rem;
 }
 
 .underg-times {
@@ -768,6 +777,11 @@ section.content {
 		width: 25vw;
 		bottom: 2rem;
 		left: 2rem;
+	}
+	.tagline-bg {
+		background-position: center bottom;
+		padding-top: 0;
+		padding-bottom: 35vw;
 	}
 }
 

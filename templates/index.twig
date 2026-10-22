@@ -6,8 +6,23 @@
 		{% include 'components/header' %}
 
 		<main>
+
+			{% include 'components/tagline' %}
+
 			<section>
-				<div class="container pb-4">
+				<div class="container">
+					<div class="event-container-v2">
+						{% include 'components/events/events-sports-v2.twig' %}
+
+						{# {% include 'components/events/events-rehab-v2.twig' %}
+
+						{% include 'components/events/events-default-v2.twig' %} #}
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="container">
 					<div class="event-container">
 						{% include 'components/events/events-sports.twig' %}
 
@@ -18,17 +33,15 @@
 				</div>
 			</section>
 
-			<section id="about">
+			{# <section id="about">
 				<div class="container-xl sway-ext">
 					<img src="/assets/img/sway-exterior.jpg" alt="Sway Exterior">
 				</div>
-			</section>
+			</section> #}
 			
-			{% include 'components/tagline' %}
-
-			<div class="container">
+			{# <div class="container">
 				<h2 class="text-center text-width">Something for every occasion,<br>for every mood and for every kind of night out.</h2>
-			</div>
+			</div> #}
 
 			{% include 'components/content/private-events.twig' %}
 
