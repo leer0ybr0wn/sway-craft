@@ -345,6 +345,7 @@ hr {
 	align-items: center;
 	gap: 2rem;
 	margin-block: 1rem;
+	min-height: 100%;
 	> div:not(:nth-child(2)) {
 		color: var(--color-sports);
 		text-align: center;
@@ -360,10 +361,12 @@ hr {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 4px;
+	width: 704px;
+	max-width: 100%;
 	min-height: 180px;
-	max-width: 704px;
 	border-radius: 0.25rem;
 	overflow: hidden;
+	align-self: stretch;
 }
 
 .promo .event-inner-v2 {

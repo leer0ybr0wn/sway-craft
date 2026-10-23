@@ -116,12 +116,12 @@ if (containerV2) {
         requestAnimationFrame(step)
     }
 
-    // block heights vary, so re-target whichever slide is currently in view to size the container
+    // fix the container to the tallest block so switching slides never jumps its height
     const observer = new ResizeObserver(() => {
-        containerV2.style.height = `${slides[index].getBoundingClientRect().height}px`
+        containerV2.style.height = `${Math.max(...blocks.map((block) => block.getBoundingClientRect().height))}px`
         containerV2.classList.add('active')
     })
-    if (slides.length > 0) observer.observe(slides[index])
+    blocks.forEach((block) => observer.observe(block))
 
     // shared by auto-tick and the manual buttons so they can't desync each other's in-flight transitions
     const goToIndex = (newIndex) => {
@@ -130,14 +130,9 @@ if (containerV2) {
         index = newIndex
 
         animateScrollTop(topWithin(slides[index]), () => {
-            observer.disconnect()
-            observer.observe(slides[index])
-
             if (index === slides.length - 1) {
                 containerV2.scrollTop = topWithin(blocks[0])
                 index = 0
-                observer.disconnect()
-                observer.observe(slides[index])
             }
 
             // there's no clone before the first slide, so "up" can't loop backward - disable it once we're back at the start
