@@ -82,6 +82,11 @@ if (containerV2) {
     const slides = blocks.length > 1 ? [...blocks, blocks[0].cloneNode(true)] : blocks
     if (slides.length > blocks.length) containerV2.appendChild(slides[slides.length - 1])
     let index = 0
+    let isAnimating = false
+
+    const upBtn = document.getElementById('scroll-control-up')
+    const downBtn = document.getElementById('scroll-control-down')
+    const scrollControls = document.querySelectorAll('.scroll-controls')
 
     // offsetTop is relative to the nearest positioned ancestor (the page here, not this container), so measure manually
     const topWithin = (el) => containerV2.scrollTop + el.getBoundingClientRect().top - containerV2.getBoundingClientRect().top
@@ -118,11 +123,12 @@ if (containerV2) {
     })
     if (slides.length > 0) observer.observe(slides[index])
 
-    const tick = () => {
-        // wrap with modulo so a throttled background tab can't push index past the last slide
-        index = (index + 1) % slides.length
+    // shared by auto-tick and the manual buttons so they can't desync each other's in-flight transitions
+    const goToIndex = (newIndex) => {
+        if (isAnimating) return
+        isAnimating = true
+        index = newIndex
 
-        // the tween's own completion callback replaces the scrollend/timeout guesswork needed by native smooth scroll
         animateScrollTop(topWithin(slides[index]), () => {
             observer.disconnect()
             observer.observe(slides[index])
@@ -133,13 +139,37 @@ if (containerV2) {
                 observer.disconnect()
                 observer.observe(slides[index])
             }
+
+            // there's no clone before the first slide, so "up" can't loop backward - disable it once we're back at the start
+            if (upBtn) upBtn.disabled = index === 0
+            isAnimating = false
         })
     }
 
+    const tick = () => goToIndex((index + 1) % slides.length)
+
     if (slides.length > 1) {
+        scrollControls.forEach((el) => el.classList.remove('d-none'))
+
         let intervalId = setInterval(tick, SCROLL_INTERVAL)
+        const restartInterval = () => {
+            clearInterval(intervalId)
+            intervalId = setInterval(tick, SCROLL_INTERVAL)
+        }
 
         containerV2.addEventListener('mouseenter', () => clearInterval(intervalId))
-        containerV2.addEventListener('mouseleave', () => { intervalId = setInterval(tick, SCROLL_INTERVAL) })
+        containerV2.addEventListener('mouseleave', restartInterval)
+
+        downBtn?.addEventListener('click', () => {
+            if (isAnimating) return
+            goToIndex((index + 1) % slides.length)
+            restartInterval()
+        })
+
+        upBtn?.addEventListener('click', () => {
+            if (isAnimating || index === 0) return
+            goToIndex(index - 1)
+            restartInterval()
+        })
     }
 }

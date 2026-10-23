@@ -307,7 +307,6 @@ hr {
 .scroll-controls {
 	text-align: center;
 	margin-block: 1rem;
-	/* display: none; */
 	button {
 		padding: 0.5rem;
 		opacity: 0.8;
