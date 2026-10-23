@@ -49,3 +49,16 @@ if (container) {
       }
   }, 5000)
 }
+
+// Event carousel v2
+
+const containerV2 = document.querySelector('.event-container-v2')
+const child = containerV2?.firstElementChild
+
+if (containerV2 && child) {
+    const observer = new ResizeObserver(() => {
+        containerV2.style.height = `${child.getBoundingClientRect().height}px`
+    })
+
+    observer.observe(child)
+}
