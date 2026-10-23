@@ -306,7 +306,6 @@ hr {
 
 .scroll-controls {
 	text-align: center;
-	margin-block: 1rem;
 	button {
 		padding: 0.5rem;
 		opacity: 0.8;
@@ -361,6 +360,34 @@ hr {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 4px;
+	min-height: 180px;
+	max-width: 704px;
+	border-radius: 0.25rem;
+	overflow: hidden;
+}
+
+.promo .event-inner-v2 {
+	background-color: var(--color-sports);
+	text-align: center;
+	place-items: center;
+}
+
+.rehab .event-inner-v2 {
+	background: url('/assets/img/bg-rehab-banner-v2.jpg') center center / cover no-repeat;
+	text-align: center;
+	place-items: center;
+}
+
+.bucenoire .event-inner-v2 {
+	background-color: var(--color-bucenoire);
+	text-align: center;
+	place-items: center;
+}
+
+.redroom .event-inner-v2 {
+	background-color: var(--color-redroom-bg);
+	text-align: center;
+	place-items: center;
 }
 
 .event-single-v2 {

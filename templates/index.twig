@@ -11,7 +11,7 @@
 
 			<section>
 				<div class="container">
-					<div class="scroll-controls d-none">
+					<div class="scroll-controls mb-3 d-none">
 						<button id="scroll-control-up" disabled>
 							<img src="assets/img/chevron-up.svg" alt="up">
 						</button>
@@ -20,12 +20,12 @@
 					<div class="event-container-v2">
 						{% include 'components/events/events-sports-v2.twig' %}
 
-						{# {% include 'components/events/events-rehab-v2.twig' %}
+						{% include 'components/events/events-rehab-v2.twig' %}
 
-						{% include 'components/events/events-default-v2.twig' %} #}
+						{% include 'components/events/events-default-v2.twig' %}
 					</div>
 					
-					<div class="scroll-controls d-none">
+					<div class="scroll-controls mt-3 d-none">
 						<button id="scroll-control-down">
 							<img src="assets/img/chevron-down.svg" alt="down">
 						</button>
@@ -33,7 +33,7 @@
 				</div>
 			</section>
 
-			<section>
+			{# <section>
 				<div class="container">
 					<div class="event-container">
 						{% include 'components/events/events-sports.twig' %}
@@ -43,7 +43,7 @@
 						{% include 'components/events/events-default.twig' %}
 					</div>
 				</div>
-			</section>
+			</section> #}
 
 			{# <section id="about">
 				<div class="container-xl sway-ext">

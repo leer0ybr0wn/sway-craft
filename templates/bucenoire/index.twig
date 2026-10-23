@@ -16,7 +16,21 @@
 
 			<section>
 				<div class="container">
-					{% include 'components/events/events-bucenoire.twig' %}
+					<div class="scroll-controls mb-3 d-none">
+						<button id="scroll-control-up" disabled>
+							<img src="assets/img/chevron-up.svg" alt="up">
+						</button>
+					</div>
+
+					<div class="event-container-v2">
+						{% include 'components/events/events-bucenoire-v2.twig' %}
+					</div>
+
+					<div class="scroll-controls mt-3 d-none">
+						<button id="scroll-control-down">
+							<img src="assets/img/chevron-down.svg" alt="down">
+						</button>
+					</div>
 				</div>
 			</section>
 

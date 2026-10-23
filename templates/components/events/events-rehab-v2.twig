@@ -1,0 +1,49 @@
+{% set site = craft.app.sites.getSiteByHandle('clubRehab') %}
+{% set now = date('now', 'Europe/London') %}
+
+{% set venueEvents = craft.entries()
+	.section('events')
+	.venue('clubRehab')
+	.eventEnabled(true)
+	.orderBy('startTime asc')
+	.with(['homeTeam', 'awayTeam'])
+	.all() %}
+
+{% for event in venueEvents %}
+	{# No End Time entered: default to 2 hours after Start Time #}
+	{% set effectiveEndTime = event.endTime ?: (event.startTime ? event.startTime|date_modify('+2 hours') : null) %}
+	{# No Start/End Time at all means an indefinite item (e.g. an evergreen promo): always show it #}
+	{% if effectiveEndTime is null or effectiveEndTime > now %}
+		{% set category = event.eventCategory ? event.eventCategory.value : null %}
+		{% set isFixture = category in ['football', 'boxing', 'otherSport'] %}
+		{% set homeTeam = event.homeTeam.one() %}
+		{% set awayTeam = event.awayTeam.one() %}
+		{% set homeTeamName = event.homeTeamText ?: (homeTeam ? homeTeam.title : null) %}
+		{% set awayTeamName = event.awayTeamText ?: (awayTeam ? awayTeam.title : null) %}
+		{% set displayTitle = isFixture
+		? (homeTeamName and awayTeamName ? homeTeamName ~ ' vs ' ~ awayTeamName : (homeTeamName ?: awayTeamName ?: event.title))
+		: event.title %}
+
+		<a href="{{ event.ctaLink ?: site.baseUrl }}" class="event-block-v2 brand-font rehab">
+			<div>
+				<img src="/assets/img/rehab.svg" alt="Enter Rehab">
+			</div>
+			
+			<div class="event-inner-v2">
+				<div class="p-3">
+					{{ displayTitle }}
+				</div>
+				<div class="p-3">{% if event.startTime %}{{ event.startTime|date('g:ia', 'Europe/London') }}<br>
+						{{ event.startTime|date('l jS M', 'Europe/London') }}{% endif %}
+					{% if event.promoText %}
+						{{ event.promoText }}
+					{% endif %}
+				</div>
+			</div>
+
+			<div>
+				<img src="/assets/img/rehab.svg" alt="Enter Rehab">
+			</div>
+		</a>
+	{% endif %}
+{% endfor %}
