@@ -17,7 +17,7 @@ No End Time: default to 2 hours after Start Time
 
 {% set upcomingEvents = venueEvents
 	|filter(event => (event.endTime ?: (event.startTime ? event.startTime|date_modify('+2 hours') : null)) is null or (event.endTime ?: (event.startTime ? event.startTime|date_modify('+2 hours') : null)) > now)
-	|slice(0, 4) %}
+	|slice(0, 6) %}
 
 {% for eventPair in upcomingEvents|batch(2) %}
 	<div class="event-block-v2 brand-font sports">

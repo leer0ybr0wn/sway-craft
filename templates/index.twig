@@ -11,12 +11,24 @@
 
 			<section>
 				<div class="container">
+					<div class="scroll-controls">
+						<button id="scroll-control-up" disabled>
+							<img src="assets/img/chevron-up.svg" alt="up">
+						</button>
+					</div>
+
 					<div class="event-container-v2">
 						{% include 'components/events/events-sports-v2.twig' %}
 
 						{# {% include 'components/events/events-rehab-v2.twig' %}
 
 						{% include 'components/events/events-default-v2.twig' %} #}
+					</div>
+					
+					<div class="scroll-controls">
+						<button id="scroll-control-down">
+							<img src="assets/img/chevron-down.svg" alt="down">
+						</button>
 					</div>
 				</div>
 			</section>
